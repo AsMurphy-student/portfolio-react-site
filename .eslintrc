@@ -1,0 +1,26 @@
+{
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "extends": ["plugin:react/recommended", "plugin:@typescript-eslint/recommended", "plugin:airbnb/recommended"],
+  "plugins": [
+    "react",
+    "@typescript-eslint"
+  ],
+  "rules": {
+    // Turn off unnecessary rules for React and TypeScript
+    "no-console": "off",
+    "jsx-a11y/alt-text": "error",
+    "jsx-a11y/human-readable-summary": "error",
+    "import/no-unresolved": "error",
+    "@typescript-eslint/explicit-module-boundary-types": "error",
+    "react/jsx-uses-react": "error"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
+
