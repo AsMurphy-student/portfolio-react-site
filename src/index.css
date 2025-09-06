@@ -4,11 +4,23 @@
   src: url('./assets/fonts/Martian-Robotics.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'MartianMono';
+  src: url('./assets/fonts/MartianMono-VariableFont_wdth\,wght.ttf') format('truetype');
+}
 
+* {
+  font-family: 'MartianMono', sans-serif;
+}
+
+:root {
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+}
 
 
 /* Defaults */
-:root {
+/* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -75,4 +87,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
