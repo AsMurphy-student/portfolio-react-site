@@ -33,10 +33,11 @@ function HomePage() {
         <BioContent />
         {/* Projects Carousel Div */}
         <div
-          className={`mx-auto grid grid-cols-1 gap-y-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4`}
+          className={`mx-auto mt-5 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4`}
         >
           {projectData.map((project, index) => (
             <div key={index} className='bg-black shadow-md rounded p-8'>
+              <img src="https://placehold.co/1920x1080" alt="" />
               <h5 className='text-lg'>{project.title}</h5>
               <p>{project.description}</p>
             </div>
