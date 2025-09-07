@@ -1,10 +1,12 @@
+import BioPic from '../../../assets/images/bio-pic.jpg';
+
 const BioContent = () => {
     return (
         <div className='grid grid-cols-1 xl:grid-cols-2 gap-16'>
           
           <div>
             <img 
-            src="../../../portfolio-react-site/assets/images/bio-pic.jpg" alt="" 
+            src={BioPic} alt="" 
             className='rounded-xl mx-auto' />
           </div>
           <div className="flex items-center">
