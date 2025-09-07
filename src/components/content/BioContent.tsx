@@ -2,30 +2,15 @@ import './BioContent.css';
 
 const BioContent = () => {
     return (
-        <div
-          className='bio-div'
-          style={{
-            display: 'flex', 
-            justifyContent: 'space-between', 
-            gap: '2rem'
-          }}>
+        <div className='grid grid-cols-1 xl:grid-cols-2 gap-16'>
           
-          <div
-          style={{
-            flexShrink: 0,
-            flexGrow: 1,
-            width: '50%', // adjust this value as needed
-            height: 'auto',
-            margin: '0 auto'
-          }}>
-            <img src="src/assets/images/bio-pic.jpg" alt="" className='bio-img'
-              style={{
-                borderRadius: '2rem',
-                width: '80%'
-              }} />
+          <div>
+            <img 
+            src="src/assets/images/bio-pic.jpg" alt="" 
+            className='rounded-xl mx-auto' />
           </div>
-          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <p style={{ textAlign: 'center', minHeight: '100px', fontSize: 32 }}>
+          <div>
+            <p className='text-center text-3xl/12'>
               As I prepare to graduate from college, I'm excited to bring my passion for innovative technology 
               solutions to the forefront. With expertise in building dynamic user interfaces using React and 
               leveraging the power of TypeScript for scalable and maintainable codebases, I've developed a 

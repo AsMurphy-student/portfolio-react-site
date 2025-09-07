@@ -38,12 +38,12 @@ const AppBarCustom: React.FC = () => {
       backgroundColor: '#b90606ff',
       padding: '8px 2px',
       // paddingTop: 0,
-      height: '50px'
+      height: '4rem'
     }}>
       <span style={{ float: 'left', marginLeft: '10px', display: 'flex', alignItems: 'center' }}>
         <h1
           style={{
-            fontSize: `${4}rem`,
+            fontSize: `${3}rem`,
             fontFamily: "'MartianRobotics'",
             color: 'black',
             margin: 0,
