@@ -43,7 +43,7 @@ function App() {
   };
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/portfolio-site'>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/secondPage" element={<SecondPage />} />
