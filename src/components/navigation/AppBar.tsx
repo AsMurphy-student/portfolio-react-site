@@ -1,30 +1,7 @@
 import * as React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-// interface DropdownProps {
-//   options: { value: string; label: string }[];
-//   onSelect: (value: string) => void;
-// }
-
-// const Dropdown: React.FC<DropdownProps> = ({ options, onSelect }) => {
-//   return (
-//     <select onChange={(e) => onSelect(e.target.value)}>
-//       {options.map((option) => (
-//         <option key={option.value} value={option.value}>
-//           {option.label}
-//         </option>
-//       ))}
-//     </select>
-//   );
-// };
-
-
-
 const AppBarCustom: React.FC = () => {
-  // const handleSelect = (value: string) => {
-    
-  // };
-
   const navigate = useNavigate();
 
   return (
@@ -37,7 +14,6 @@ const AppBarCustom: React.FC = () => {
       justifyContent: 'space-between',
       backgroundColor: '#b90606ff',
       padding: '8px 2px',
-      // paddingTop: 0,
       height: '4rem'
     }}>
       <span style={{ float: 'left', marginLeft: '10px', display: 'flex', alignItems: 'center' }}>
@@ -60,11 +36,7 @@ const AppBarCustom: React.FC = () => {
       </span>
 
       <span style={{ float: 'right', marginRight: '10px', display: 'flex', alignItems: 'center' }}>
-        {/* <Dropdown options={[
-          { value: 'option1', label: 'Option 1' },
-          { value: 'option2', label: 'Option 2' },
-          // ...
-        ]} onSelect={handleSelect} /> */}
+        {/* Other Buttons go here */}
       </span>
     </div>
   );
