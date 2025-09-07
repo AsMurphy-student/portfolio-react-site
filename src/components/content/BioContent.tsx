@@ -4,7 +4,7 @@ const BioContent = () => {
           
           <div>
             <img 
-            src="src/assets/images/bio-pic.jpg" alt="" 
+            src="../../../portfolio-react-site/assets/images/bio-pic.jpg" alt="" 
             className='rounded-xl mx-auto' />
           </div>
           <div className="flex items-center">

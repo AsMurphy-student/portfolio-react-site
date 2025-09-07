@@ -14,7 +14,7 @@ function Project(projectData: projectPageData) {
 
           <div className='grid md:grid-cols-2 xl:grid-cols-4 gap-x-4'>
             {projectData.skillArray.map((element) => (
-              <p className='bg-cyan-500 rounded-md text-center sm:text-left m-2 p-1 border-2 border-solid'>{element}</p>
+              <p key={element} className='bg-cyan-500 rounded-md text-center sm:text-left m-2 p-1 border-2 border-solid'>{element}</p>
             ))}
           </div>
 
@@ -34,8 +34,8 @@ function Project(projectData: projectPageData) {
       <div
           className={`mx-auto mt-5 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4`}
         >
-          {projectData.showcaseImages.map((image) => (
-              <div className='bg-black rounded-lg'>
+          {projectData.showcaseImages.map((image, index) => (
+              <div key={index} className='bg-black rounded-lg'>
                 <img src={image.url} alt="" className='p-2 rounded-xl'/>
                 <p className='my-2'>{image.caption}</p>
               </div>

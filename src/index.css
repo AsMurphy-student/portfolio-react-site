@@ -1,12 +1,12 @@
 /* Fonts */
 @font-face {
   font-family: 'MartianRobotics';
-  src: url('./assets/fonts/Martian-Robotics.ttf') format('truetype');
+  src: url('../assets/fonts/Martian-Robotics.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'MartianMono';
-  src: url("./assets/fonts/static/MartianMono-Regular.ttf") format('truetype');
+  src: url("../assets/fonts/static/MartianMono-Regular.ttf") format('truetype');
 }
 
 * {
