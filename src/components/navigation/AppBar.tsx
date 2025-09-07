@@ -14,12 +14,12 @@ const AppBarCustom: React.FC = () => {
       justifyContent: 'space-between',
       backgroundColor: '#b90606ff',
       padding: '8px 2px',
-      height: '4rem'
+      height: '2rem'
     }}>
       <span style={{ float: 'left', marginLeft: '10px', display: 'flex', alignItems: 'center' }}>
         <h1
           style={{
-            fontSize: `${3}rem`,
+            fontSize: `${2}rem`,
             fontFamily: "'MartianRobotics'",
             color: 'black',
             margin: 0,

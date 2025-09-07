@@ -41,7 +41,7 @@ function HomePage() {
     <>
       <AppBarCustom />
       {/* Body Div */}
-      <div style={{marginTop: '3rem'}}>
+      <div className='mt-4'>
         <h1 className='text-6xl mb-5'>About Myself</h1>
 
         <BioContent />

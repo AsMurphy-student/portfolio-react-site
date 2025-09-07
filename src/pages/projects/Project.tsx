@@ -6,7 +6,7 @@ function Project(projectData: projectPageData) {
     <>
       <AppBarCustom />
       {/* Body Div */}
-      <div className='grid grid-cols-2 mt-10'>
+      <div className='grid grid-cols-1 lg:grid-cols-2 mt-5'>
         {/* Project Image and Skills Left Aligned */}
         <div className='grid grid-cols-1 gap-5'>
           <h1 className='text-center text-6xl'>{projectData.title}</h1>
@@ -14,7 +14,7 @@ function Project(projectData: projectPageData) {
 
           <div className='grid md:grid-cols-2 xl:grid-cols-4 gap-x-4'>
             {projectData.skillArray.map((element) => (
-              <p className='bg-cyan-500 rounded-md text-left m-2 p-1 border-2 border-solid'>{element}</p>
+              <p className='bg-cyan-500 rounded-md text-center sm:text-left m-2 p-1 border-2 border-solid'>{element}</p>
             ))}
           </div>
 
@@ -24,7 +24,8 @@ function Project(projectData: projectPageData) {
           </div>
         </div>
         {/* Project Description */}
-        <div className='flex items-center'>
+        <div className='flex items-center flex-col'>
+          <h1 className='text-center text-6xl mt-5 lg:mt-0'>Project Description</h1>
           <p className='text-center text-3xl/12 p-4'>{projectData.description}</p>
         </div>
       </div>
