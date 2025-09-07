@@ -56,6 +56,7 @@ function HomePage() {
               className='bg-black shadow-md rounded p-8 cursor-pointer'
               onClick={() => {
                 navigate(project.page);
+                window.scrollTo({ top: 0, behavior: 'instant' });
               }}
             >
               <img src={project.image} alt={project.alt} />

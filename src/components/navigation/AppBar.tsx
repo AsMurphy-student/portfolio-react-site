@@ -29,6 +29,7 @@ const AppBarCustom: React.FC = () => {
           }}
           onClick={() => {
             navigate('/');
+            window.scrollTo({ top: 0, behavior: 'instant' });
           }}
         >
           Ashton Murphy
