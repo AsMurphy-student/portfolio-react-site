@@ -45,9 +45,12 @@ function App() {
   return (
     <BrowserRouter basename='/portfolio-react-site'>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="*" element={<HomePage />} />
         <Route path="/secondPage" element={<SecondPage />} />
         <Route path="/project" element={<Project {...nr2003PointsSiteData} />} />
+
+        {/* Custom 404 page for non-existent URLs */}
+        {/* <Route path="/:path(*)" element={<NotFoundPage />} /> */}
       </Routes>
     </BrowserRouter>
   )
