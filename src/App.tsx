@@ -43,7 +43,7 @@ function App() {
   };
 
   return (
-    <BrowserRouter basename='/portfolio-react-site'>
+    <BrowserRouter basename='/portfolio-react-site/'>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/secondPage" element={<SecondPage />} />
