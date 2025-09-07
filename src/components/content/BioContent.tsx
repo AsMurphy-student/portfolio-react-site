@@ -11,11 +11,10 @@ const BioContent = () => {
           </div>
           <div className="flex items-center">
             <p className='text-center text-3xl/12 p-4'>
-              My name is Ashton Murphy, and I am a up and coming Web Developer, 
+              My name is <u>Ashton Murphy</u>, and I am an up and coming Web Developer, 
               graduating RIT (Rochester Institute of Technology). My proficiencies 
-              include traditional web development (html, css, javascript/typescript), React Native 
-              with Typescript, Flutter, along with backend tools such as Node.js and Express.js. 
-              
+              include <u>traditional web development</u> (HTML, CSS, Javascript/Typescript), <u>React Native 
+              with Typescript</u>, <u>Flutter</u>, along with backend tools such as <u>Node.js</u> and <u>Express.js</u>. 
             </p>
           </div>
 
