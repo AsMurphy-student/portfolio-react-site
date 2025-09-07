@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: 'MartianMono';
-  src: url('./assets/fonts/MartianMono-VariableFont_wdth\,wght.ttf') format('truetype');
+  src: url("./assets/fonts/static/MartianMono-Regular.ttf") format('truetype');
 }
 
 * {
