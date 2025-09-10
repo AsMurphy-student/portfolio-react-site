@@ -38,7 +38,7 @@ function HomePage() {
 
 
   return (
-    <>
+    <div className='bg-white dark:bg-black text-black dark:text-white pt-10 px-5'>
       <AppBarCustom />
       {/* Body Div */}
       <div className='mt-4'>
@@ -53,7 +53,7 @@ function HomePage() {
           {projectData.map((project, index) => (
             <div 
               key={index} 
-              className='bg-black shadow-md rounded p-8 cursor-pointer'
+              className='bg-gray-800 shadow-md rounded p-8 cursor-pointer'
               onClick={() => {
                 navigate(project.page);
                 window.scrollTo({ top: 0, behavior: 'instant' });
@@ -66,7 +66,7 @@ function HomePage() {
           ))}
         </div>
       </div>
-    </>
+    </div>
   )
 }
 

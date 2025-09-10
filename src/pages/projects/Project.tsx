@@ -3,7 +3,7 @@ import type { projectPageData } from '../../interfaces/projectPage'
 
 function Project(projectData: projectPageData) {
   return (
-    <>
+    <div className='bg-white dark:bg-black text-black dark:text-white pt-10 px-5'>
       <AppBarCustom />
       {/* Body Div */}
       <div className='grid grid-cols-1 lg:grid-cols-2 mt-5'>
@@ -41,7 +41,7 @@ function Project(projectData: projectPageData) {
               </div>
             ))}
         </div>
-    </>
+    </div>
   )
 }
 
