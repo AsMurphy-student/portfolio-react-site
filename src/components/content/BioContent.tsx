@@ -1,4 +1,4 @@
-import BioPic from '../../assets/images/bio-pic.jpg';
+import BioPic from '../../assets/images/bio-pic-transparent.png';
 
 const BioContent = () => {
     return (

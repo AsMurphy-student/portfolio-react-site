@@ -4,7 +4,7 @@ import Logo from '../content/Logo';
 const AppBarCustom: React.FC = () => {
 
   return (
-    <div className='fixed top-0 left-0 right-0 flex justify-between bg-red-600 px-4 h-10'
+    <div className='fixed top-0 left-0 right-0 flex justify-between bg-gray-400 px-4 h-10'
     >
       <span className='float-left flex items-center'>
         <Logo />

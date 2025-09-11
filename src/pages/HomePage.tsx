@@ -40,7 +40,7 @@ function HomePage() {
 
   return (
     <>
-      <div className='bg-white dark:bg-black text-black dark:text-white py-10 px-5'>
+      <div className='bg-cyan-100 dark:bg-black text-black dark:text-white py-10 px-5'>
         <AppBarCustom />
         {/* Body Div */}
         <div className='mt-4'>
