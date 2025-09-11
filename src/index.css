@@ -9,9 +9,9 @@
   src: url("./assets//fonts/static/MartianMono-Regular.ttf") format('truetype');
 }
 
-* {
+/* * {
   font-family: 'MartianMono', sans-serif;
-}
+} */
 
 /* :root {
   color: rgba(255, 255, 255, 0.87);

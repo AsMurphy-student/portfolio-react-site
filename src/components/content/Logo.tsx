@@ -5,15 +5,10 @@ const Logo = () => {
     return (
         <div className="ml-2">
             <h1
-            style={{
-                fontSize: `${2}rem`,
-                fontFamily: "'MartianRobotics'",
-                color: 'black',
-                margin: 0,
-                padding: 0,
-                textAlign: 'left',
-                cursor: 'pointer'
-            }}
+            // style={{
+            //     fontFamily: 'MartianRobotics'
+            // }}
+            className="text-4xl text-black m-0 p-0 text-left cursor-pointer font-[MartianRobotics]"
             onClick={() => {
                 navigate('/');
                 window.scrollTo({ top: 0, behavior: 'instant' });

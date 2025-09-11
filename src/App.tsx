@@ -9,8 +9,10 @@ import type { Theme } from './interfaces/theme'
 function App() {
   const siteTheme: Theme = {
     accentColor: 'bg-gray-400',
-    backgroundColor: 'bg-cyan-100',
-    backgroundTextColor: 'text-black',
+    mainBackgroundColor: 'bg-cyan-100',
+    mainBackgroundTextColor: 'text-black',
+    contentBoxBackgroundColor: 'bg-gray-800',
+    contentBoxBackgroundTextColor: 'text-orange-100'
   }
 
   const nr2003PointsSiteData: projectPageData = {
@@ -54,7 +56,7 @@ function App() {
       <Routes>
         <Route path="*" element={<HomePage {...siteTheme} />} />
         <Route path="/secondPage" element={<SecondPage {...siteTheme} />} />
-        <Route path="/project" element={<Project {...nr2003PointsSiteData} />} />
+        <Route path="/project" element={<Project projectData={nr2003PointsSiteData} siteTheme={siteTheme} />} />
 
         {/* Custom 404 page for non-existent URLs */}
         {/* <Route path="/:path(*)" element={<NotFoundPage />} /> */}

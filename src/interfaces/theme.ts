@@ -1,5 +1,7 @@
 export interface Theme {
     accentColor: string;
-    backgroundColor: string;
-    backgroundTextColor: string;
+    mainBackgroundColor: string;
+    mainBackgroundTextColor: string;
+    contentBoxBackgroundColor: string;
+    contentBoxBackgroundTextColor: string;
 }

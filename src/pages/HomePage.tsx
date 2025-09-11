@@ -43,7 +43,7 @@ function HomePage(siteTheme: Theme) {
 
   return (
     <>
-      <div className={`${siteTheme.backgroundColor} dark:bg-black ${siteTheme.backgroundTextColor} dark:text-white py-10 px-5`}>
+      <div className={`${siteTheme.mainBackgroundColor} dark:bg-black ${siteTheme.mainBackgroundTextColor} dark:text-white font-[MartianMono] py-10 px-5`}>
         <AppBarCustom {...siteTheme} />
         {/* Body Div */}
         <div className='mt-4'>
@@ -58,7 +58,7 @@ function HomePage(siteTheme: Theme) {
             {projectData.map((project, index) => (
               <div 
                 key={index} 
-                className='bg-gray-800 text-orange-100 shadow-md rounded p-8 cursor-pointer'
+                className={`${siteTheme.contentBoxBackgroundColor} ${siteTheme.contentBoxBackgroundTextColor} shadow-md rounded p-8 cursor-pointer`}
                 onClick={() => {
                   navigate(project.page);
                   window.scrollTo({ top: 0, behavior: 'instant' });

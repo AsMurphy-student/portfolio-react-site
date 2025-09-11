@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Force Light Theme */
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
 #root {
   /* max-width: 1280px; */
   margin: 0 auto;
