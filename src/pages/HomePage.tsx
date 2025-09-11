@@ -2,20 +2,23 @@ import { useNavigate } from 'react-router-dom';
 import BioContent from '../components/content/BioContent';
 import AppBarCustom from '../components/navigation/AppBar'
 import Footer from '../components/navigation/Footer';
+import type { Theme } from '../interfaces/theme';
 
-function HomePage() {
+function HomePage(siteTheme: Theme) {
   const navigate = useNavigate();
 
   const projectData = [
     {
-      title: 'NR2003 Points Site (Work in Progress)',
+      title: "NR2003 Points Site",
+      workInProgress: true,
       description: 'Site will display race data for NR2003 using a React Frontend and Express.js backend.',
       page: '/project',
       image: 'https://placehold.co/2560x1440',
       alt: ''
     },
     {
-      title: 'OpenWeatherMap Flutter Site (Work in Progress)',
+      title: 'OpenWeatherMap Flutter Site',
+      workInProgress: true,
       description: 'Site will be made with Flutter using the OpenWeatherMap API.',
       page: '/secondPage',
       image: 'https://placehold.co/1920x1080',
@@ -40,8 +43,8 @@ function HomePage() {
 
   return (
     <>
-      <div className='bg-cyan-100 dark:bg-black text-black dark:text-white py-10 px-5'>
-        <AppBarCustom />
+      <div className={`${siteTheme.backgroundColor} dark:bg-black ${siteTheme.backgroundTextColor} dark:text-white py-10 px-5`}>
+        <AppBarCustom {...siteTheme} />
         {/* Body Div */}
         <div className='mt-4'>
           <h1 className='text-6xl mb-5 text-center'>About Myself</h1>
@@ -55,15 +58,17 @@ function HomePage() {
             {projectData.map((project, index) => (
               <div 
                 key={index} 
-                className='bg-gray-800 shadow-md rounded p-8 cursor-pointer'
+                className='bg-gray-800 text-orange-100 shadow-md rounded p-8 cursor-pointer'
                 onClick={() => {
                   navigate(project.page);
                   window.scrollTo({ top: 0, behavior: 'instant' });
                 }}
               >
                 <img src={project.image} alt={project.alt} />
-                <h5 className='text-lg'>{project.title}</h5>
-                <p>{project.description}</p>
+                <h5 className='text-xl'>{project.title}</h5>
+                { project.workInProgress && <h5 className='text-xl'>(Work in Progress)</h5> }
+                <hr className='my-2' />
+                <p className='text-sm'>{project.description}</p>
               </div>
             ))}
           </div>

@@ -4,8 +4,15 @@ import HomePage from './pages/HomePage'
 import SecondPage from './pages/SecondPage'
 import Project from './pages/projects/Project'
 import type { projectPageData } from './interfaces/projectPage'
+import type { Theme } from './interfaces/theme'
 
 function App() {
+  const siteTheme: Theme = {
+    accentColor: 'bg-gray-400',
+    backgroundColor: 'bg-cyan-100',
+    backgroundTextColor: 'text-black',
+  }
+
   const nr2003PointsSiteData: projectPageData = {
     title: 'NR2003 Points Site',
     mainImageURL: 'https://placehold.co/1920x1080',
@@ -45,8 +52,8 @@ function App() {
   return (
     <BrowserRouter basename='/portfolio-react-site'>
       <Routes>
-        <Route path="*" element={<HomePage />} />
-        <Route path="/secondPage" element={<SecondPage />} />
+        <Route path="*" element={<HomePage {...siteTheme} />} />
+        <Route path="/secondPage" element={<SecondPage {...siteTheme} />} />
         <Route path="/project" element={<Project {...nr2003PointsSiteData} />} />
 
         {/* Custom 404 page for non-existent URLs */}

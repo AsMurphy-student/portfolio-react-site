@@ -1,9 +1,10 @@
 import AppBarCustom from '../components/navigation/AppBar'
+import type { Theme } from '../interfaces/theme'
 
-function SecondPage() {
+function SecondPage(siteTheme: Theme) {
   return (
     <>
-      <AppBarCustom />
+      <AppBarCustom {...siteTheme} />
       <h1>Second Page</h1>
     </>
   )

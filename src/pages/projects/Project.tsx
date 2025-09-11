@@ -1,10 +1,12 @@
 import AppBarCustom from '../../components/navigation/AppBar'
 import type { projectPageData } from '../../interfaces/projectPage'
+import type { Theme } from '../../interfaces/theme'
 
-function Project(projectData: projectPageData) {
+function Project(props: {projectData: projectPageData, siteTheme: Theme}) {
+  
   return (
     <div className='bg-white dark:bg-black text-black dark:text-white pt-10 px-5'>
-      <AppBarCustom />
+      <AppBarCustom {...siteTheme} />
       {/* Body Div */}
       <div className='grid grid-cols-1 lg:grid-cols-2 mt-5'>
         {/* Project Image and Skills Left Aligned */}
