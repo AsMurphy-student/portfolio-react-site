@@ -15,7 +15,7 @@ function Project(props: {projectData: projectPageData, siteTheme: Theme}) {
           {/* Project Image and Skills Left Aligned */}
           <div className='grid grid-cols-1 gap-5'>
             <h1 className='text-center text-6xl'>{projectData.title}</h1>
-            <img src={projectData.mainImageURL} alt={projectData.mainImageAltText} className='rounded-xl' />
+            <img src={projectData.mainImageURL} alt={projectData.mainImageAltText} className={`rounded-xl border-8 border-solid ${siteTheme.imageBorderColor}`} />
 
             <div className='grid md:grid-cols-2 xl:grid-cols-4 gap-x-4'>
               {props.projectData.skillArray.map((element) => (
@@ -29,9 +29,11 @@ function Project(props: {projectData: projectPageData, siteTheme: Theme}) {
             </div>
           </div>
           {/* Project Description */}
-          <div className='flex items-center flex-col'>
+          <div className='flex h-full flex-col'>
             <h1 className='text-center text-6xl mt-5 lg:mt-0'>Project Description</h1>
-            <p className='text-center text-3xl/12 p-4'>{projectData.description}</p>
+            <div className='flex flex-1 items-center'>
+              <p className='text-center text-3xl/12 p-4'>{projectData.description}</p>
+            </div>
           </div>
         </div>
         {/* Project Images Grid */}

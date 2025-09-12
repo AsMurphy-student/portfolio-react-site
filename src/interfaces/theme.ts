@@ -4,4 +4,5 @@ export interface Theme {
     mainBackgroundTextColor: string;
     contentBoxBackgroundColor: string;
     contentBoxBackgroundTextColor: string;
+    imageBorderColor: string;
 }

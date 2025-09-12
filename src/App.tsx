@@ -12,7 +12,8 @@ function App() {
     mainBackgroundColor: 'bg-cyan-100',
     mainBackgroundTextColor: 'text-black',
     contentBoxBackgroundColor: 'bg-gray-800',
-    contentBoxBackgroundTextColor: 'text-orange-100'
+    contentBoxBackgroundTextColor: 'text-orange-100',
+    imageBorderColor: 'border-gray-800'
   }
 
   const nr2003PointsSiteData: projectPageData = {
