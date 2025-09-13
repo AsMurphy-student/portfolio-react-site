@@ -1,6 +1,6 @@
-import type { projectShowcaseImage } from "./projectShowcaseImage";
+import type { ProjectShowcaseImage } from "./projectShowcaseImage";
 
-export interface projectPageData {
+export interface ProjectPageData {
     title: string;
     mainImageURL: string;
     mainImageAltText: string;
@@ -8,5 +8,5 @@ export interface projectPageData {
     skillArray: string[];
     websiteURL: string;
     gitRepoURL: string;
-    showcaseImages: projectShowcaseImage[];
+    showcaseImages: ProjectShowcaseImage[];
 }

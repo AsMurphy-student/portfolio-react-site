@@ -1,4 +1,4 @@
-export interface projectShowcaseImage {
+export interface ProjectShowcaseImage {
     url: string;
     caption: string;
 }

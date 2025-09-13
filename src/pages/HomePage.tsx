@@ -4,7 +4,9 @@ import AppBarCustom from '../components/navigation/AppBar'
 import Footer from '../components/navigation/Footer';
 import type { Theme } from '../interfaces/theme';
 
-function HomePage(siteTheme: Theme) {
+function HomePage(props: { siteTheme: Theme, projectKeys: string[] }) {
+  const { siteTheme, projectKeys } = props;
+
   const navigate = useNavigate();
 
   const projectData = [
@@ -12,7 +14,7 @@ function HomePage(siteTheme: Theme) {
       title: "NR2003 Points Site",
       workInProgress: true,
       description: 'Site will display race data for NR2003 using a React Frontend and Express.js backend.',
-      page: '/project',
+      page: '',
       image: 'https://placehold.co/2560x1440',
       alt: ''
     },
@@ -20,7 +22,7 @@ function HomePage(siteTheme: Theme) {
       title: 'OpenWeatherMap Flutter Site',
       workInProgress: true,
       description: 'Site will be made with Flutter using the OpenWeatherMap API.',
-      page: '/secondPage',
+      page: '',
       image: 'https://placehold.co/1920x1080',
       alt: ''
     },
@@ -39,6 +41,10 @@ function HomePage(siteTheme: Theme) {
     //   alt: ''
     // },
   ];
+
+  projectData.map((project, index) => {
+    project.page = `/project/${projectKeys[index]}`
+  })
 
 
   return (

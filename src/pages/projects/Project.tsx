@@ -1,10 +1,15 @@
+import { useLocation } from 'react-router-dom';
 import AppBarCustom from '../../components/navigation/AppBar'
 import Footer from '../../components/navigation/Footer'
-import type { projectPageData } from '../../interfaces/projectPage'
 import type { Theme } from '../../interfaces/theme'
+import type { ProjectDictionary } from '../../interfaces/projectDictionary';
 
-function Project(props: {projectData: projectPageData, siteTheme: Theme}) {
-  const {projectData, siteTheme} = props;
+function Project(props: {projectDictionary: ProjectDictionary, siteTheme: Theme}) {
+  const {projectDictionary, siteTheme} = props;
+  const location = useLocation();
+
+  const projectKey = location.pathname.slice(9);
+  const projectData = projectDictionary[projectKey];
 
   return (
     <>
@@ -18,14 +23,14 @@ function Project(props: {projectData: projectPageData, siteTheme: Theme}) {
             <img src={projectData.mainImageURL} alt={projectData.mainImageAltText} className={`rounded-xl border-8 border-solid ${siteTheme.imageBorderColor}`} />
 
             <div className='grid md:grid-cols-2 xl:grid-cols-4 gap-x-4'>
-              {props.projectData.skillArray.map((element) => (
+              {projectData.skillArray.map((element) => (
                 <p key={element} className='bg-cyan-500 rounded-md text-center sm:text-left m-2 p-1 border-2 border-solid'>{element}</p>
               ))}
             </div>
 
             <div className='grid grid-cols-2 gap-10'>
-              <button className={`${siteTheme.contentBoxBackgroundColor} ${siteTheme.contentBoxBackgroundTextColor} rounded-md`} p-2 cursor-pointer onClick={() => window.open(props.projectData.websiteURL, '_blank')}>View Website</button>
-              <button className={`${siteTheme.contentBoxBackgroundColor} ${siteTheme.contentBoxBackgroundTextColor} rounded-md`} p-2 cursor-pointer onClick={() => window.open(props.projectData.gitRepoURL, '_blank')}>View on Github</button>
+              <button className={`${siteTheme.contentBoxBackgroundColor} ${siteTheme.contentBoxBackgroundTextColor} rounded-md`} p-2 cursor-pointer onClick={() => window.open(projectData.websiteURL, '_blank')}>View Website</button>
+              <button className={`${siteTheme.contentBoxBackgroundColor} ${siteTheme.contentBoxBackgroundTextColor} rounded-md`} p-2 cursor-pointer onClick={() => window.open(projectData.gitRepoURL, '_blank')}>View on Github</button>
             </div>
           </div>
           {/* Project Description */}
