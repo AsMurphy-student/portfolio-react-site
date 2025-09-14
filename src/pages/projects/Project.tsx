@@ -4,7 +4,7 @@ import Footer from '../../components/navigation/Footer'
 import type { Theme } from '../../interfaces/theme'
 import type { ProjectDictionary } from '../../interfaces/projectDictionary';
 
-function Project(props: {projectDictionary: ProjectDictionary, siteTheme: Theme}) {
+function Project(props: { projectDictionary: ProjectDictionary, siteTheme: Theme }) {
   const {projectDictionary, siteTheme} = props;
   const location = useLocation();
 
@@ -14,7 +14,7 @@ function Project(props: {projectDictionary: ProjectDictionary, siteTheme: Theme}
   return (
     <>
       <div className={`${siteTheme.mainBackgroundColor} dark:bg-black ${siteTheme.mainBackgroundTextColor} dark:text-white font-[MartianMono] pt-10 px-5`}>
-        <AppBarCustom {...siteTheme} />
+        <AppBarCustom siteTheme={siteTheme} />
         {/* Body Div */}
         <div className='grid grid-cols-1 lg:grid-cols-2 mt-5'>
           {/* Project Image and Skills Left Aligned */}
@@ -29,8 +29,8 @@ function Project(props: {projectDictionary: ProjectDictionary, siteTheme: Theme}
             </div>
 
             <div className='grid grid-cols-2 gap-10'>
-              <button className={`${siteTheme.contentBoxBackgroundColor} ${siteTheme.contentBoxBackgroundTextColor} rounded-md`} p-2 cursor-pointer onClick={() => window.open(projectData.websiteURL, '_blank')}>View Website</button>
-              <button className={`${siteTheme.contentBoxBackgroundColor} ${siteTheme.contentBoxBackgroundTextColor} rounded-md`} p-2 cursor-pointer onClick={() => window.open(projectData.gitRepoURL, '_blank')}>View on Github</button>
+              <button className={`${siteTheme.contentBoxBackgroundColor} ${siteTheme.contentBoxTextColor} rounded-md`} p-2 cursor-pointer onClick={() => window.open(projectData.websiteURL, '_blank')}>View Website</button>
+              <button className={`${siteTheme.contentBoxBackgroundColor} ${siteTheme.contentBoxTextColor} rounded-md`} p-2 cursor-pointer onClick={() => window.open(projectData.gitRepoURL, '_blank')}>View on Github</button>
             </div>
           </div>
           {/* Project Description */}
@@ -45,14 +45,14 @@ function Project(props: {projectDictionary: ProjectDictionary, siteTheme: Theme}
         <h1 className='text-center text-6xl mt-5'>Project Images</h1>
         <div className={`mx-auto mt-5 pb-5 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4`}>
             {projectData.showcaseImages.map((image, index) => (
-                <div key={index} className={`${siteTheme.contentBoxBackgroundColor} ${siteTheme.contentBoxBackgroundTextColor} rounded-lg`}>
+                <div key={index} className={`${siteTheme.contentBoxBackgroundColor} ${siteTheme.contentBoxTextColor} rounded-lg`}>
                   <img src={image.url} alt="" className='p-2 rounded-xl'/>
                   <p className='my-2'>{image.caption}</p>
                 </div>
               ))}
         </div>
       </div>
-      <Footer />
+      <Footer {...siteTheme} />
     </>
   )
 }

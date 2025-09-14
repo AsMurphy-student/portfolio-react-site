@@ -1,7 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 import HomePage from './pages/HomePage'
-import SecondPage from './pages/SecondPage'
 import Project from './pages/projects/Project'
 import type { ProjectPageData } from './interfaces/projectPage'
 import type { Theme } from './interfaces/theme'
@@ -10,18 +9,22 @@ import type { ProjectDictionary } from './interfaces/projectDictionary'
 function App() {
   const siteTheme: Theme = {
     accentColor: 'bg-gray-400',
+    logoColor: 'text-black',
+    accentTextColor: 'text-black',
     mainBackgroundColor: 'bg-cyan-100',
     mainBackgroundTextColor: 'text-black',
     contentBoxBackgroundColor: 'bg-gray-800',
-    contentBoxBackgroundTextColor: 'text-orange-100',
-    imageBorderColor: 'border-gray-800'
+    contentBoxTextColor: 'text-orange-100',
+    imageBorderColor: 'border-gray-800',
+    footerBackgroundColor: 'bg-gray-800',
+    footerTextColor: 'text-white'
   }
 
   const nr2003PointsSiteData: ProjectPageData = {
     title: 'NR2003 Points Site',
     mainImageURL: 'https://placehold.co/1920x1080',
     mainImageAltText: 'Alt Text',
-    description: 'Test Description writing some more to test this rn ok it working',
+    description: 'React Test Description writing some more to test this rn ok it working',
     skillArray: ["Skill 1", "Skill 2", "Skill 3", "Skill 4", "Skill 5", "Skill 6", "Skill 7"],
     websiteURL: 'https://placehold.co/1920x1080',
     gitRepoURL: 'https://placehold.co/1920x1080',
@@ -57,7 +60,7 @@ function App() {
     title: 'OpenWeather Flutter App',
     mainImageURL: 'https://placehold.co/1920x1080',
     mainImageAltText: 'Alt Text',
-    description: 'Test Description writing some more to test this rn ok it working',
+    description: 'Flutter Test Description writing some more to test this rn ok it working',
     skillArray: ["Skill 1", "Skill 2", "Skill 3", "Skill 4", "Skill 5", "Skill 6", "Skill 7"],
     websiteURL: 'https://placehold.co/1920x1080',
     gitRepoURL: 'https://placehold.co/1920x1080',
@@ -92,13 +95,12 @@ function App() {
   const projectDictionary: ProjectDictionary = {
     "nr2003-pts-site": nr2003PointsSiteData,
     "openweather-flutter-app": openweatherflutterapp,
-  }
+  };
 
   return (
     <BrowserRouter basename='/portfolio-react-site'>
       <Routes>
         <Route path="*" element={<HomePage siteTheme={siteTheme} projectKeys={Object.keys(projectDictionary)} />} />
-        <Route path="/secondPage" element={<SecondPage {...siteTheme} />} />
         <Route path="/project/:projectname" element={<Project projectDictionary={projectDictionary} siteTheme={siteTheme} />} />
 
         {/* Custom 404 page for non-existent URLs */}

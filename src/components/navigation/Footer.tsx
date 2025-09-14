@@ -1,15 +1,18 @@
-// import Logo from "../content/Logo";
+import type { Theme } from "../../interfaces/theme";
 
-const Footer = () => {
+const Footer = (siteTheme: Theme) => {
     return (
-        <div className='bg-gray-800 min-h-64 text-white font-[MartianMono]'>
-          <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
-            <div>
-                {/* <Logo /> */}
-                <p>test</p>
+        <div className={`${siteTheme.footerBackgroundColor} ${siteTheme.footerTextColor} min-h-64 font-[MartianMono]`}>
+          <div className="grid grid-cols-1 gap-6 xl:grid-cols-3 text-center xl:text-left">
+            <div id="ContactInfo">
+              <p>test</p>
             </div>
-            <p>test</p>
-            <p>test</p>
+            <div>
+              <p>test</p>
+            </div>
+            <div>
+              <p>test</p>
+            </div>
           </div>
         </div>
     );

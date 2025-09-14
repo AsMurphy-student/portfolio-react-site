@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
+import type { Theme } from "../../interfaces/theme";
 
-const Logo = () => {
+const Logo = (siteTheme: Theme) => {
     const navigate = useNavigate();
     return (
         <div className="ml-2">
@@ -8,7 +9,7 @@ const Logo = () => {
             // style={{
             //     fontFamily: 'MartianRobotics'
             // }}
-            className="text-4xl text-black m-0 p-0 text-left cursor-pointer font-[MartianRobotics]"
+            className={`text-4xl ${siteTheme.logoColor} m-0 p-0 text-left cursor-pointer font-[MartianRobotics]`}
             onClick={() => {
                 navigate('/');
                 window.scrollTo({ top: 0, behavior: 'instant' });

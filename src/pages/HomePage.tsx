@@ -3,6 +3,7 @@ import BioContent from '../components/content/BioContent';
 import AppBarCustom from '../components/navigation/AppBar'
 import Footer from '../components/navigation/Footer';
 import type { Theme } from '../interfaces/theme';
+import { useEffect } from 'react';
 
 function HomePage(props: { siteTheme: Theme, projectKeys: string[] }) {
   const { siteTheme, projectKeys } = props;
@@ -44,27 +45,39 @@ function HomePage(props: { siteTheme: Theme, projectKeys: string[] }) {
 
   projectData.map((project, index) => {
     project.page = `/project/${projectKeys[index]}`
-  })
+  });
+
+  // Handles clicking project button from separate page
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      const element = document.querySelector(hash);
+      if (element) {
+        element.scrollIntoView();
+      }
+    }
+  }, []);
+
 
 
   return (
     <>
       <div className={`${siteTheme.mainBackgroundColor} dark:bg-black ${siteTheme.mainBackgroundTextColor} dark:text-white font-[MartianMono] py-10 px-5`}>
-        <AppBarCustom {...siteTheme} />
+        <AppBarCustom siteTheme={siteTheme} />
         {/* Body Div */}
         <div className='mt-4'>
           <h1 className='text-6xl mb-5 text-center'>About Myself</h1>
 
           <BioContent />
           {/* Projects Carousel Div */}
-          <h1 className='text-6xl my-5 text-center'>Projects</h1>
+          <h1 className='text-6xl my-5 text-center' id='ProjectHeader'>Projects</h1>
           <div
             className={`mx-auto mt-5 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4`}
           >
             {projectData.map((project, index) => (
               <div 
                 key={index} 
-                className={`${siteTheme.contentBoxBackgroundColor} ${siteTheme.contentBoxBackgroundTextColor} shadow-md rounded p-8 cursor-pointer`}
+                className={`${siteTheme.contentBoxBackgroundColor} ${siteTheme.contentBoxTextColor} shadow-md rounded p-8 cursor-pointer`}
                 onClick={() => {
                   navigate(project.page);
                   window.scrollTo({ top: 0, behavior: 'instant' });
@@ -81,7 +94,7 @@ function HomePage(props: { siteTheme: Theme, projectKeys: string[] }) {
         </div>
       </div>
       {/* Footer */}
-      <Footer></Footer>
+      <Footer {...siteTheme} />
     </>
   )
 }
