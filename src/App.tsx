@@ -21,6 +21,13 @@ function App() {
   }
 
   const nr2003PointsSiteData: ProjectPageData = {
+    previewData: {
+      title: "NR2003 Points Site",
+      workInProgress: true,
+      description: 'Site will display race data for NR2003 using a React Frontend and Express.js backend.',
+      image: 'https://placehold.co/2560x1440',
+      altText: ''
+    },
     title: 'NR2003 Points Site',
     mainImageURL: 'https://placehold.co/1920x1080',
     mainImageAltText: 'Alt Text',
@@ -57,6 +64,13 @@ function App() {
   };
 
   const openweatherflutterapp: ProjectPageData = {
+    previewData: {
+      title: 'OpenWeatherMap Flutter Site',
+      workInProgress: true,
+      description: 'Site will be made with Flutter using the OpenWeatherMap API.',
+      image: 'https://placehold.co/1920x1080',
+      altText: ''
+    },
     title: 'OpenWeather Flutter App',
     mainImageURL: 'https://placehold.co/1920x1080',
     mainImageAltText: 'Alt Text',
@@ -100,7 +114,7 @@ function App() {
   return (
     <BrowserRouter basename='/portfolio-react-site'>
       <Routes>
-        <Route path="*" element={<HomePage siteTheme={siteTheme} projectKeys={Object.keys(projectDictionary)} />} />
+        <Route path="*" element={<HomePage siteTheme={siteTheme} projectDictionary={projectDictionary} />} />
         <Route path="/project/:projectname" element={<Project projectDictionary={projectDictionary} siteTheme={siteTheme} />} />
 
         {/* Custom 404 page for non-existent URLs */}
