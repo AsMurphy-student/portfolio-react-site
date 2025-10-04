@@ -1,11 +1,15 @@
 import Logo from '../content/Logo';
 import type { Theme } from '../../interfaces/theme';
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import useWindowDimensions from '../utils/Dimensions';
 
 const AppBarCustom = (props: { siteTheme: Theme }) => {
   const { siteTheme } = props;
 
   const navigate = useNavigate();
+
+  const { width } = useWindowDimensions();
 
   return (
     <div className={`${siteTheme.accentColor} fixed top-0 left-0 right-0 flex justify-between px-4 h-10`}
@@ -14,8 +18,16 @@ const AppBarCustom = (props: { siteTheme: Theme }) => {
         <Logo {...siteTheme} />
       </span>
 
-      <span className='float-left mr-2 flex items-center'>
-        {/* Other Buttons go here */}
+      {
+        width <= 680
+        ?
+        (
+          <span><p>hello</p></span>
+        )
+        :
+        (
+          <span className='float-left mr-2 flex items-center'>
+        
         <div className="inline-flex">
           <button 
           className="
@@ -32,6 +44,7 @@ const AppBarCustom = (props: { siteTheme: Theme }) => {
           >
             Home
           </button>
+
           <button 
           className="
           bg-gray-300 
@@ -50,6 +63,7 @@ const AppBarCustom = (props: { siteTheme: Theme }) => {
           >
             Projects
           </button>
+          
           <button 
           className="
           bg-gray-300 
@@ -69,6 +83,8 @@ const AppBarCustom = (props: { siteTheme: Theme }) => {
           </button>
         </div>
       </span>
+        )
+      }
     </div>
   );
 };
