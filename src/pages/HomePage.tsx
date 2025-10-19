@@ -53,7 +53,7 @@ function HomePage(props: { siteTheme: Theme, projectDictionary: ProjectDictionar
                 <h5 className='text-xl font-extrabold'>{project.title}</h5>
                 {project.previewData.workInProgress && <h5 className='text-xl font-extrabold'>(Work in Progress)</h5>}
                 <hr className='my-2' />
-                <p className='text-sm font-extrabold'>{project.description}</p>
+                <p className='text-sm font-extrabold'>{project.previewData.description}</p>
               </div>
             ))}
           </div>
