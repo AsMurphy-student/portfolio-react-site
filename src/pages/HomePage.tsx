@@ -23,7 +23,7 @@ function HomePage(props: { siteTheme: Theme, projectDictionary: ProjectDictionar
       }
     }
   }, []);
-  
+
   return (
     <>
       <div className={`${siteTheme.mainBackgroundColor}
@@ -41,8 +41,8 @@ function HomePage(props: { siteTheme: Theme, projectDictionary: ProjectDictionar
             className={`mx-auto mt-5 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4`}
           >
             {Object.values(projectDictionary).map((project, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className={`${siteTheme.contentBoxBackgroundColor} ${siteTheme.contentBoxTextColor} shadow-md rounded p-8 cursor-pointer`}
                 onClick={() => {
                   navigate(`/project/${projectKeys[index]}`);
@@ -51,7 +51,7 @@ function HomePage(props: { siteTheme: Theme, projectDictionary: ProjectDictionar
               >
                 <img className={`border-4 ${siteTheme.imageBorderColor} rounded-lg`} src={project.previewData.image} alt={project.previewData.altText} />
                 <h5 className='text-xl font-extrabold'>{project.title}</h5>
-                { project.previewData.workInProgress && <h5 className='text-xl font-extrabold'>(Work in Progress)</h5> }
+                {project.previewData.workInProgress && <h5 className='text-xl font-extrabold'>(Work in Progress)</h5>}
                 <hr className='my-2' />
                 <p className='text-sm font-extrabold'>{project.description}</p>
               </div>
