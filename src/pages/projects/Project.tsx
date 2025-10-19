@@ -5,7 +5,7 @@ import type { Theme } from '../../interfaces/theme'
 import type { ProjectDictionary } from '../../interfaces/projectDictionary';
 
 function Project(props: { projectDictionary: ProjectDictionary, siteTheme: Theme }) {
-  const {projectDictionary, siteTheme} = props;
+  const { projectDictionary, siteTheme } = props;
   const location = useLocation();
 
   const projectKey = location.pathname.slice(9);
@@ -44,12 +44,12 @@ function Project(props: { projectDictionary: ProjectDictionary, siteTheme: Theme
         {/* Project Images Grid */}
         <h1 className='text-center text-6xl mt-5'>Project Images</h1>
         <div className={`mx-auto mt-5 pb-5 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4`}>
-            {projectData.showcaseImages.map((image, index) => (
-                <div key={index} className={`${siteTheme.contentBoxBackgroundColor} ${siteTheme.contentBoxTextColor} rounded-lg`}>
-                  <img src={image.url} alt="" className='p-2 rounded-xl'/>
-                  <p className='my-2'>{image.caption}</p>
-                </div>
-              ))}
+          {projectData.showcaseImages.map((image, index) => (
+            <div key={index} className={`${siteTheme.contentBoxBackgroundColor} ${siteTheme.contentBoxTextColor} rounded-lg`}>
+              <img src={image.url} alt="" className='p-2 rounded-xl' />
+              <p className='my-2'>{image.caption}</p>
+            </div>
+          ))}
         </div>
       </div>
       <Footer {...siteTheme} />
