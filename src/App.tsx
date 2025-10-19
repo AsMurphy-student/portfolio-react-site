@@ -8,16 +8,19 @@ import type { ProjectDictionary } from './interfaces/projectDictionary'
 
 function App() {
   const siteTheme: Theme = {
-    accentColor: 'bg-gray-400',
+    accentColor: 'bg-[#8BC34A]',
     logoColor: 'text-black',
-    accentTextColor: 'text-black',
-    mainBackgroundColor: 'bg-cyan-100',
+    navButtonColor: 'bg-[#FFA07A]',
+    navButtonHoverColor: 'hover:bg-[#FFC080]',
+    navButtonTextColor: 'text-[#032B44]',
+    mainBackgroundColor: 'bg-[#E5E5EA]',
     mainBackgroundTextColor: 'text-black',
-    contentBoxBackgroundColor: 'bg-gray-800',
-    contentBoxTextColor: 'text-orange-100',
+    contentBoxBackgroundColor: 'bg-[#C9C4CA]',
+    contentBoxTextColor: 'text-[#444444]',
     imageBorderColor: 'border-gray-800',
-    footerBackgroundColor: 'bg-gray-800',
-    footerTextColor: 'text-white'
+    footerBackgroundColor: 'bg-[#032B44]',
+    footerTextColor: 'text-[#F7F7F7]',
+    darkAccentColor: '',
   }
 
   const nr2003PointsSiteData: ProjectPageData = {

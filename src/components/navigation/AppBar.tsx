@@ -28,13 +28,13 @@ const AppBarCustom = (props: { siteTheme: Theme }) => {
             <span className='float-right mr-2 flex items-center'>
               <div className="inline-flex">
                 <button 
-                className="
-                bg-gray-300 
-                hover:bg-gray-400 
-                text-gray-800 
+                className={`
+                ${siteTheme.navButtonColor}
+                ${siteTheme.navButtonHoverColor}
+                ${siteTheme.navButtonTextColor}
                 font-bold 
                 py-2 px-4 
-                rounded-l"
+                rounded-l`}
                 onClick={() => {
                   setMenuOpen(!menuOpen);
                 }}
@@ -49,13 +49,13 @@ const AppBarCustom = (props: { siteTheme: Theme }) => {
             <span className='float-left mr-2 flex items-center'>
               <div className="inline-flex">
                 <button 
-                className="
-                bg-gray-300 
-                hover:bg-gray-400 
-                text-gray-800 
+                className={`
+                ${siteTheme.navButtonColor}
+                ${siteTheme.navButtonHoverColor}
+                ${siteTheme.navButtonTextColor}
                 font-bold 
                 py-2 px-4 
-                rounded-l"
+                rounded-l`}
                 onClick={() => {
                   navigate('/');
                   window.scrollTo({ top: 0, behavior: 'instant' });
@@ -65,12 +65,12 @@ const AppBarCustom = (props: { siteTheme: Theme }) => {
                 </button>
 
                 <button 
-                className="
-                bg-gray-300 
-                hover:bg-gray-400 
-                text-gray-800 
+                className={`
+                ${siteTheme.navButtonColor}
+                ${siteTheme.navButtonHoverColor}
+                ${siteTheme.navButtonTextColor}
                 font-bold 
-                py-2 px-4"
+                py-2 px-4`}
                 onClick={() => {
                   navigate('/#ProjectHeader');
                   // Handles scrolling to project header when still on home
@@ -84,13 +84,13 @@ const AppBarCustom = (props: { siteTheme: Theme }) => {
                 </button>
                 
                 <button 
-                className="
-                bg-gray-300 
-                hover:bg-gray-400 
-                text-gray-800 
+                className={`
+                ${siteTheme.navButtonColor}
+                ${siteTheme.navButtonHoverColor}
+                ${siteTheme.navButtonTextColor}
                 font-bold 
                 py-2 px-4 
-                rounded-r"
+                rounded-r`}
                 onClick={() => {
                   const element = document.getElementById('ContactInfo');
                   if (element) {
@@ -110,13 +110,13 @@ const AppBarCustom = (props: { siteTheme: Theme }) => {
         <span className='float-left mr-2 flex items-center'>
               <div className="inline-flex">
                 <button 
-                className="
-                bg-gray-300 
-                hover:bg-gray-400 
-                text-gray-800 
+                className={`
+                ${siteTheme.navButtonColor}
+                ${siteTheme.navButtonHoverColor}
+                ${siteTheme.navButtonTextColor}
                 font-bold 
                 py-2 px-4 
-                rounded-l"
+                rounded-l`}
                 onClick={() => {
                   navigate('/');
                   window.scrollTo({ top: 0, behavior: 'instant' });
@@ -126,12 +126,12 @@ const AppBarCustom = (props: { siteTheme: Theme }) => {
                 </button>
 
                 <button 
-                className="
-                bg-gray-300 
-                hover:bg-gray-400 
-                text-gray-800 
+                className={`
+                ${siteTheme.navButtonColor}
+                ${siteTheme.navButtonHoverColor}
+                ${siteTheme.navButtonTextColor}
                 font-bold 
-                py-2 px-4"
+                py-2 px-4`}
                 onClick={() => {
                   navigate('/#ProjectHeader');
                   // Handles scrolling to project header when still on home
@@ -145,13 +145,13 @@ const AppBarCustom = (props: { siteTheme: Theme }) => {
                 </button>
                 
                 <button 
-                className="
-                bg-gray-300 
-                hover:bg-gray-400 
-                text-gray-800 
+                className={`
+                ${siteTheme.navButtonColor}
+                ${siteTheme.navButtonHoverColor}
+                ${siteTheme.navButtonTextColor}
                 font-bold 
                 py-2 px-4 
-                rounded-r"
+                rounded-r`}
                 onClick={() => {
                   const element = document.getElementById('ContactInfo');
                   if (element) {

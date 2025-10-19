@@ -26,7 +26,9 @@ function HomePage(props: { siteTheme: Theme, projectDictionary: ProjectDictionar
   
   return (
     <>
-      <div className={`${siteTheme.mainBackgroundColor} dark:bg-black ${siteTheme.mainBackgroundTextColor} dark:text-white font-[MartianMono] py-10 px-5 w-screen`}>
+      <div className={`${siteTheme.mainBackgroundColor} dark:bg-black 
+      ${siteTheme.mainBackgroundTextColor} dark:text-white font-[MartianMono] 
+       py-10 px-5 w-screen`}>
         <AppBarCustom siteTheme={siteTheme} />
         {/* Body Div */}
         <div className='mt-4'>
@@ -47,11 +49,11 @@ function HomePage(props: { siteTheme: Theme, projectDictionary: ProjectDictionar
                   window.scrollTo({ top: 0, behavior: 'instant' });
                 }}
               >
-                <img src={project.previewData.image} alt={project.previewData.altText} />
-                <h5 className='text-xl'>{project.title}</h5>
-                { project.previewData.workInProgress && <h5 className='text-xl'>(Work in Progress)</h5> }
+                <img className={`border-4 ${siteTheme.imageBorderColor} rounded-lg`} src={project.previewData.image} alt={project.previewData.altText} />
+                <h5 className='text-xl font-extrabold'>{project.title}</h5>
+                { project.previewData.workInProgress && <h5 className='text-xl font-extrabold'>(Work in Progress)</h5> }
                 <hr className='my-2' />
-                <p className='text-sm'>{project.description}</p>
+                <p className='text-sm font-extrabold'>{project.description}</p>
               </div>
             ))}
           </div>

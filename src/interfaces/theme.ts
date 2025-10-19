@@ -1,7 +1,9 @@
 export interface Theme {
     accentColor: string;
     logoColor: string;
-    accentTextColor: string;
+    navButtonColor: string;
+    navButtonHoverColor: string;
+    navButtonTextColor: string;
     mainBackgroundColor: string;
     mainBackgroundTextColor: string;
     contentBoxBackgroundColor: string;
@@ -9,4 +11,5 @@ export interface Theme {
     imageBorderColor: string;
     footerBackgroundColor: string;
     footerTextColor: string;
+    darkAccentColor: string;
 }
