@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import './App.css'
 import HomePage from './pages/HomePage'
 import Project from './pages/projects/Project'
 import type { ProjectPageData } from './interfaces/projectPage'
@@ -7,7 +6,22 @@ import type { Theme } from './interfaces/theme'
 import type { ProjectDictionary } from './interfaces/projectDictionary'
 
 function App() {
-  const siteTheme: Theme = {
+  const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  const siteTheme: Theme = isDarkMode ? {
+    accentColor: 'bg-[#4CAF50]',
+    logoColor: 'text-white',
+    navButtonColor: 'bg-[#3498DB]',
+    navButtonHoverColor: 'hover:bg-[#45B3FA]',
+    navButtonTextColor: 'text-gray-200',
+    mainBackgroundColor: 'bg-[#333]',
+    mainBackgroundTextColor: 'text-white',
+    contentBoxBackgroundColor: 'bg-[#444]',
+    contentBoxTextColor: 'text-gray-200',
+    imageBorderColor: 'border-gray-600',
+    footerBackgroundColor: 'bg-[#666]',
+    footerTextColor: 'text-white',
+  } : {
     accentColor: 'bg-[#8BC34A]',
     logoColor: 'text-black',
     navButtonColor: 'bg-[#FFA07A]',
@@ -20,8 +34,7 @@ function App() {
     imageBorderColor: 'border-gray-800',
     footerBackgroundColor: 'bg-[#032B44]',
     footerTextColor: 'text-[#F7F7F7]',
-    darkAccentColor: '',
-  }
+  };
 
   const nr2003PointsSiteData: ProjectPageData = {
     previewData: {

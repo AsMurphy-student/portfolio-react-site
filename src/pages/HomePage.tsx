@@ -26,8 +26,8 @@ function HomePage(props: { siteTheme: Theme, projectDictionary: ProjectDictionar
   
   return (
     <>
-      <div className={`${siteTheme.mainBackgroundColor} dark:bg-black 
-      ${siteTheme.mainBackgroundTextColor} dark:text-white font-[MartianMono] 
+      <div className={`${siteTheme.mainBackgroundColor}
+      ${siteTheme.mainBackgroundTextColor} font-[MartianMono] 
        py-10 px-5 w-screen`}>
         <AppBarCustom siteTheme={siteTheme} />
         {/* Body Div */}

@@ -11,5 +11,9 @@ export interface Theme {
     imageBorderColor: string;
     footerBackgroundColor: string;
     footerTextColor: string;
-    darkAccentColor: string;
+    // darkAccentColor: string;
+    // darkLogoColor: string;
+    // darkNavButtonColor: string;
+    // darkNavButtonHoverColor: string;
+    // darkNavButtonTextColor: string;
 }
