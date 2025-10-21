@@ -32,7 +32,7 @@ function Project(props: { projectDictionary: ProjectDictionary, siteTheme: Theme
               ))}
             </div>
 
-            <div className='grid grid-cols-2 gap-10'>
+            <div className={projectData.websiteURL ? 'grid grid-cols-2 gap-10' : 'grid grid-cols-1 gap-10'}>
               <button onClick={() => window.open(projectData.gitRepoURL, '_blank')} className={`${siteTheme.contentBoxBackgroundColor} text-${siteTheme.contentBoxTextColor} hover:bg-gray-700 hover:text-white rounded-lg p-2 transition duration-300 ease-in-out cursor-pointer mx-auto my-4`}>
                 <FontAwesomeIcon icon={faGithub} size='lg' color={siteTheme.contentBoxTextColor} /> View on Github
               </button>
