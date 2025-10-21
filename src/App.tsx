@@ -122,9 +122,48 @@ function App() {
     ]
   };
 
+  const panic: ProjectPageData = {
+    previewData: {
+      title: 'Pan-ic',
+      workInProgress: false,
+      description: 'A MonoGame project created in a group setting in a Game Design Class.',
+      image: '/portfolio-react-site/panic-main-image.jpg',
+      altText: 'Showcases the main menu of Pan-ic'
+    },
+    title: 'Pan-ic',
+    mainImageURL: '/portfolio-react-site/panic-main-image.jpg',
+    mainImageAltText: 'Showcases the main menu of Pan-ic',
+    description: 'In this collaborative C# MonoGame project, I worked alongside three team members to design the game\'s architecture. As part of my role in data management, I focused on optimizing enemy and level data structures for efficient loading and manipulation. Additionally, I developed a simple, but effective, Windows Forms tool that streamlines the process of creating levels, allowing designers to focus on their creative vision.',
+    skillArray: ["Collaboration", "Design Thinking", "Data Management", "C# Programming", "Problem Solving", "User-Centered Design"],
+    gitRepoURL: 'https://github.com/Funklax/Group-5-Whatever-Forever',
+    showcaseImages: [
+      {
+        url: '/portfolio-react-site/chef-running.gif',
+        caption: 'Protagonist Chef Running Animation.'
+      },
+      {
+        url: '/portfolio-react-site/chef-attack.gif',
+        caption: 'Protagonist Chef Attacking Animation.'
+      },
+      {
+        url: '/portfolio-react-site/bullet-bounce.gif',
+        caption: 'Protagonist Chef Attacking with Bullets Bouncing off pan.'
+      },
+      {
+        url: '/portfolio-react-site/bullets-flying.gif',
+        caption: 'Protagonist Chef Dodging Enemy Bullets.'
+      },
+      {
+        url: '/portfolio-react-site/enemy-animations.gif',
+        caption: 'Showcases the enemy animations. In this case the middle animation is the enemy exploding upon death.'
+      },
+    ],
+  };
+
   const projectDictionary: ProjectDictionary = {
     "nr2003-pts-site": nr2003PointsSiteData,
     "openweather-flutter-app": openweatherflutterapp,
+    "pan-ic": panic,
   };
 
   return (

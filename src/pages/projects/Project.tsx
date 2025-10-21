@@ -20,17 +20,19 @@ function Project(props: { projectDictionary: ProjectDictionary, siteTheme: Theme
           {/* Project Image and Skills Left Aligned */}
           <div className='grid grid-cols-1 gap-5'>
             <h1 className='text-center text-6xl'>{projectData.title}</h1>
-            <img src={projectData.mainImageURL} alt={projectData.mainImageAltText} className={`rounded-xl border-8 border-solid ${siteTheme.imageBorderColor}`} />
+            <img src={projectData.mainImageURL} alt={projectData.mainImageAltText} className={`rounded-xl mx-auto border-8 border-solid ${siteTheme.imageBorderColor}`} />
 
             <div className='grid md:grid-cols-2 xl:grid-cols-4 gap-x-4'>
               {projectData.skillArray.map((element) => (
-                <p key={element} className='bg-cyan-500 rounded-md text-center sm:text-left m-2 p-1 border-2 border-solid'>{element}</p>
+                <p key={element} className='bg-cyan-500 w-fit mx-auto rounded-md text-center sm:text-left m-2 p-1 border-2 border-solid'>{element}</p>
               ))}
             </div>
 
             <div className='grid grid-cols-2 gap-10'>
-              <button className={`${siteTheme.contentBoxBackgroundColor} ${siteTheme.contentBoxTextColor} rounded-md`} p-2 cursor-pointer onClick={() => window.open(projectData.websiteURL, '_blank')}>View Website</button>
-              <button className={`${siteTheme.contentBoxBackgroundColor} ${siteTheme.contentBoxTextColor} rounded-md`} p-2 cursor-pointer onClick={() => window.open(projectData.gitRepoURL, '_blank')}>View on Github</button>
+              <button className={`${siteTheme.contentBoxBackgroundColor} ${siteTheme.contentBoxTextColor} mx-auto rounded-md`} p-2 cursor-pointer onClick={() => window.open(projectData.gitRepoURL, '_blank')}>View on Github</button>
+              {projectData.websiteURL &&
+                <button className={`${siteTheme.contentBoxBackgroundColor} ${siteTheme.contentBoxTextColor} mx-auto rounded-md`} p-2 cursor-pointer onClick={() => window.open(projectData.websiteURL, '_blank')}>View Website</button>
+              }
             </div>
           </div>
           {/* Project Description */}
@@ -45,9 +47,9 @@ function Project(props: { projectDictionary: ProjectDictionary, siteTheme: Theme
         <h1 className='text-center text-6xl mt-5'>Project Images</h1>
         <div className={`mx-auto mt-5 pb-5 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4`}>
           {projectData.showcaseImages.map((image, index) => (
-            <div key={index} className={`${siteTheme.contentBoxBackgroundColor} ${siteTheme.contentBoxTextColor} rounded-lg`}>
-              <img src={image.url} alt="" className='p-2 rounded-xl' />
-              <p className='my-2'>{image.caption}</p>
+            <div key={index} className={`${siteTheme.contentBoxBackgroundColor} ${siteTheme.contentBoxTextColor} h-fit rounded-lg`}>
+              <img src={image.url} className='p-2 w-full mx-auto rounded-xl' />
+              <p className='my-2 text-center'>{image.caption}</p>
             </div>
           ))}
         </div>

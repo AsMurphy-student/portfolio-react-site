@@ -8,7 +8,7 @@ export interface ProjectPageData {
     mainImageAltText: string;
     description: string;
     skillArray: string[];
-    websiteURL: string;
+    websiteURL?: string;
     gitRepoURL: string;
     showcaseImages: ProjectShowcaseImage[];
 }
