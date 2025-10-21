@@ -6,6 +6,7 @@ import type { ProjectDictionary } from '../../interfaces/projectDictionary';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faEye } from '@fortawesome/free-regular-svg-icons';
 
 function Project(props: { projectDictionary: ProjectDictionary, siteTheme: Theme }) {
   const { projectDictionary, siteTheme } = props;
@@ -32,13 +33,13 @@ function Project(props: { projectDictionary: ProjectDictionary, siteTheme: Theme
             </div>
 
             <div className='grid grid-cols-2 gap-10'>
-              {/* <button className={`${siteTheme.contentBoxBackgroundColor} ${siteTheme.contentBoxTextColor} mx-auto rounded-md`} p-2 cursor-pointer onClick={() => window.open(projectData.gitRepoURL, '_blank')}>View on Github</button> */}
-              <button className={`${siteTheme.contentBoxBackgroundColor} text-${siteTheme.contentBoxTextColor} hover:bg-gray-700 hover:text-white rounded-lg p-2 transition duration-300 ease-in-out cursor-pointer mx-auto my-4`}>
-                {/* <FontAwesomeIcon icon={faGithub} size="lg" color="#333" /> View on Github */}
+              <button onClick={() => window.open(projectData.gitRepoURL, '_blank')} className={`${siteTheme.contentBoxBackgroundColor} text-${siteTheme.contentBoxTextColor} hover:bg-gray-700 hover:text-white rounded-lg p-2 transition duration-300 ease-in-out cursor-pointer mx-auto my-4`}>
                 <FontAwesomeIcon icon={faGithub} size='lg' color={siteTheme.contentBoxTextColor} /> View on Github
               </button>
               {projectData.websiteURL &&
-                <button className={`${siteTheme.contentBoxBackgroundColor} ${siteTheme.contentBoxTextColor} mx-auto rounded-md`} p-2 cursor-pointer onClick={() => window.open(projectData.websiteURL, '_blank')}>View Website</button>
+                <button onClick={() => window.open(projectData.websiteURL, '_blank')} className={`${siteTheme.contentBoxBackgroundColor} text-${siteTheme.contentBoxTextColor} hover:bg-gray-700 hover:text-white rounded-lg p-2 transition duration-300 ease-in-out cursor-pointer mx-auto my-4`}>
+                  <FontAwesomeIcon icon={faEye} size='lg' color={siteTheme.contentBoxTextColor} /> View Website
+                </button>
               }
             </div>
           </div>
