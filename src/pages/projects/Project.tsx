@@ -24,6 +24,7 @@ function Project(props: { projectDictionary: ProjectDictionary, siteTheme: Theme
           {/* Project Image and Skills Left Aligned */}
           <div className='grid grid-cols-1 gap-5'>
             <h1 className='text-center text-6xl'>{projectData.title}</h1>
+            <h3 className='text-center text-xl'>{projectData.date.getMonth() + 1}/{projectData.date.getFullYear()}</h3>
             <img src={projectData.mainImageURL} alt={projectData.mainImageAltText} className={`rounded-xl mx-auto border-8 border-solid ${siteTheme.imageBorderColor}`} />
 
             <div className='grid md:grid-cols-2 xl:grid-cols-4 gap-x-4'>

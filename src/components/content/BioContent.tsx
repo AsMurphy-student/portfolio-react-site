@@ -12,8 +12,9 @@ const BioContent = () => {
         <p className='text-center text-3xl/12 p-4'>
           My name is <u>Ashton Murphy</u>, and I am an up and coming Web Developer,
           graduating RIT (Rochester Institute of Technology). My proficiencies
-          include <u>traditional web development</u> (HTML, CSS, Javascript/Typescript), <u>React Native
+          include <u>traditional web development</u> (HTML, CSS, Javascript/Typescript), <u>React
             with Typescript</u>, <u>Flutter</u>, along with backend tools such as <u>Node.js</u> and <u>Express.js</u>.
+          I also have experience with <u>MongoDB</u>.
         </p>
       </div>
 

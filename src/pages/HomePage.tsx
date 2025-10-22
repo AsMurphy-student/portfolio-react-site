@@ -52,6 +52,7 @@ function HomePage(props: { siteTheme: Theme, projectDictionary: ProjectDictionar
                 <img className={`border-4 ${siteTheme.imageBorderColor} object-fit  rounded-lg`} src={project.previewData.image} alt={project.previewData.altText} />
                 <h5 className='text-xl font-extrabold'>{project.previewData.title}</h5>
                 {project.previewData.workInProgress && <h5 className='text-xl font-extrabold'>(Work in Progress)</h5>}
+                <h5>{project.date.getMonth() + 1}/{project.date.getUTCFullYear()}</h5>
                 <hr className='my-2' />
                 <p className='text-sm font-extrabold'>{project.previewData.description}</p>
               </div>

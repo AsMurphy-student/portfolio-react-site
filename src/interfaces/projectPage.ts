@@ -4,6 +4,7 @@ import type { ProjectShowcaseImage } from "./projectShowcaseImage";
 export interface ProjectPageData {
     previewData: ProjectPreview;
     title: string;
+    date: Date;
     mainImageURL: string;
     mainImageAltText: string;
     description: string;

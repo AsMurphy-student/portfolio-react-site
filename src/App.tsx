@@ -9,6 +9,7 @@ function App() {
   const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
   const siteTheme: Theme = isDarkMode ? {
+    // Dark Theme
     accentColor: 'bg-[#4CAF50]',
     logoColor: 'text-white',
     navButtonColor: 'bg-[#3498DB]',
@@ -22,6 +23,7 @@ function App() {
     footerBackgroundColor: 'bg-[#666]',
     footerTextColor: 'text-white',
   } : {
+    // Light Theme
     accentColor: 'bg-[#8BC34A]',
     logoColor: 'text-black',
     navButtonColor: 'bg-[#FFA07A]',
@@ -45,6 +47,7 @@ function App() {
       altText: ''
     },
     title: 'NR2003 Points Site',
+    date: new Date(),
     mainImageURL: 'https://placehold.co/1920x1080',
     mainImageAltText: 'Alt Text',
     description: 'This project will use ExpressJS for the backend while also using MongoDB for race data. The front end will also be made using React TS.',
@@ -88,6 +91,7 @@ function App() {
       altText: ''
     },
     title: 'OpenWeather Flutter App',
+    date: new Date(),
     mainImageURL: 'https://placehold.co/1920x1080',
     mainImageAltText: 'Alt Text',
     description: 'This app will use the OpenWeather API to display weather data and will be designed with mobile devices in mind. May also ensure it is responsive as a desktop app as well.',
@@ -131,6 +135,7 @@ function App() {
       altText: 'Showcases the main menu of Pan-ic'
     },
     title: 'Pan-ic',
+    date: new Date('2023-5-1'),
     mainImageURL: '/portfolio-react-site/panic-main-image.jpg',
     mainImageAltText: 'Showcases the main menu of Pan-ic',
     description: 'In this collaborative C# MonoGame project, I worked alongside three team members to design the game\'s architecture. As part of my role in data management, I focused on optimizing enemy and level data structures for efficient loading and manipulation. Additionally, I developed a simple, but effective, Windows Forms tool that streamlines the process of creating levels, allowing designers to focus on their creative vision.',
