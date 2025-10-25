@@ -17,13 +17,13 @@ const AppBarCustom = (props: { siteTheme: Theme }) => {
 
   return (
     <>
-      <div className={`${siteTheme.accentColor} fixed top-0 left-0 right-0 flex justify-between px-4 h-10 w-screen`}
+      <div className={`${siteTheme.accentColor} fixed top-0 left-0 right-0 flex justify-between h-10 w-screen`}
       >
         <span className='float-left flex items-center'>
           <Logo siteTheme={siteTheme} clickable />
         </span>
         {
-          width <= 680
+          width <= 800
             ?
             (
               <span className='float-right mr-2 flex items-center'>
