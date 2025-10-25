@@ -21,7 +21,7 @@ const Logo = (props: { siteTheme: Theme, clickable: boolean }) => {
                 </h1>
                 :
                 <h1
-                    className={`text-5xl ${siteTheme.logoColor} m-0 p-0 text-left font-[MartianRobotics]`}
+                    className={`${width <= 800 ? "text-4xl" : "text-5xl"} ${siteTheme.logoColor} m-0 p-0 text-left font-[MartianRobotics]`}
                 >
                     Ashton Murphy
                 </h1>
