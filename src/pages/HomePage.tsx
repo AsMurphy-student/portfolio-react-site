@@ -49,7 +49,7 @@ function HomePage(props: { siteTheme: Theme, projectDictionary: ProjectDictionar
                   window.scrollTo({ top: 0, behavior: 'instant' });
                 }}
               >
-                <img className={`border-4 ${siteTheme.imageBorderColor} mx-auto h-78 rounded-lg`} src={project.previewData.image} alt={project.previewData.altText} />
+                <img className={`border-4 ${siteTheme.imageBorderColor} mx-auto h-76 rounded-lg`} src={project.previewData.image} alt={project.previewData.altText} />
                 <h5 className='text-xl font-extrabold'>{project.previewData.title}</h5>
                 {project.previewData.workInProgress && <h5 className='text-xl font-extrabold'>(Work in Progress)</h5>}
                 <h5>{project.date.getMonth() + 1}/{project.date.getUTCFullYear()}</h5>
