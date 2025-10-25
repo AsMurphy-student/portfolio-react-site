@@ -36,7 +36,7 @@ function HomePage(props: { siteTheme: Theme, projectDictionary: ProjectDictionar
 
           <BioContent />
           {/* Projects Carousel Div */}
-          <h1 className='text-6xl my-5 text-center' id='ProjectHeader'>Projects</h1>
+          <h1 className='text-5xl my-5 text-center' id='ProjectHeader'>Projects</h1>
           <div
             className={`mx-auto mt-5 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4`}
           >
@@ -49,7 +49,7 @@ function HomePage(props: { siteTheme: Theme, projectDictionary: ProjectDictionar
                   window.scrollTo({ top: 0, behavior: 'instant' });
                 }}
               >
-                <img className={`border-4 ${siteTheme.imageBorderColor} mx-auto h-76 rounded-lg`} src={project.previewData.image} alt={project.previewData.altText} />
+                <img className={`border-4 ${siteTheme.imageBorderColor} mx-auto rounded-lg`} src={project.previewData.image} alt={project.previewData.altText} />
                 <h5 className='text-xl font-extrabold'>{project.previewData.title}</h5>
                 {project.previewData.workInProgress && <h5 className='text-xl font-extrabold'>(Work in Progress)</h5>}
                 <h5>{project.date.getMonth() + 1}/{project.date.getUTCFullYear()}</h5>

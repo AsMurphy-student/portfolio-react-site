@@ -9,7 +9,7 @@ const BioContent = () => {
           className='rounded-xl mx-auto' />
       </div>
       <div className="flex items-center">
-        <p className='text-center text-3xl/12 p-4'>
+        <p className='text-center text-3xl/12'>
           My name is <u>Ashton Murphy</u>, and I am an up and coming Web Developer,
           graduating RIT (Rochester Institute of Technology). My proficiencies
           include <u>traditional web development</u> (HTML, CSS, Javascript/Typescript), <u>React
