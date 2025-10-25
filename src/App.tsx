@@ -131,7 +131,7 @@ function App() {
       title: 'Pan-ic',
       workInProgress: false,
       description: 'A MonoGame project created in a group setting in a Game Design Class.',
-      image: '/portfolio-react-site/panic-main-image.jpg',
+      image: '/portfolio-react-site/panic-preview-image.jpg',
       altText: 'Showcases the main menu of Pan-ic'
     },
     title: 'Pan-ic',
