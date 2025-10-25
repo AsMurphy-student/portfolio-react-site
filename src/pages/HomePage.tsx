@@ -43,13 +43,13 @@ function HomePage(props: { siteTheme: Theme, projectDictionary: ProjectDictionar
             {Object.values(projectDictionary).map((project, index) => (
               <div
                 key={index}
-                className={`${siteTheme.contentBoxBackgroundColor} ${siteTheme.contentBoxTextColor} shadow-md rounded p-8 cursor-pointer`}
+                className={`${siteTheme.contentBoxBackgroundColor} ${siteTheme.contentBoxTextColor} shadow-md rounded p-8 h-full cursor-pointer`}
                 onClick={() => {
                   navigate(`/project/${projectKeys[index]}`);
                   window.scrollTo({ top: 0, behavior: 'instant' });
                 }}
               >
-                <img className={`border-4 ${siteTheme.imageBorderColor} object-fit  rounded-lg`} src={project.previewData.image} alt={project.previewData.altText} />
+                <img className={`border-4 ${siteTheme.imageBorderColor} mx-auto h-78 rounded-lg`} src={project.previewData.image} alt={project.previewData.altText} />
                 <h5 className='text-xl font-extrabold'>{project.previewData.title}</h5>
                 {project.previewData.workInProgress && <h5 className='text-xl font-extrabold'>(Work in Progress)</h5>}
                 <h5>{project.date.getMonth() + 1}/{project.date.getUTCFullYear()}</h5>
