@@ -84,17 +84,17 @@ function App() {
 
   const openweatherflutterapp: ProjectPageData = {
     previewData: {
-      title: 'OpenWeatherMap Flutter Site',
+      title: 'NR2003 Championship Manager Flutter Desktop App',
       workInProgress: true,
-      description: 'Site will be made with Flutter using the OpenWeatherMap API.',
+      description: 'A Flutter App utilizing a local MongoDB Database for local, offline management of championship season in NR2003. This app will also utilize the NR2003 Replay Analyzer to generate in depth race statistics along with championship statistics.',
       image: 'https://placehold.co/1920x1080',
       altText: ''
     },
-    title: 'OpenWeather Flutter App',
+    title: 'NR2003 Championship Manager Flutter Desktop App',
     date: new Date(),
     mainImageURL: 'https://placehold.co/1920x1080',
     mainImageAltText: 'Alt Text',
-    description: 'This app will use the OpenWeather API to display weather data and will be designed with mobile devices in mind. May also ensure it is responsive as a desktop app as well.',
+    description: 'I\'ve seen a lot of different championship programs for NR2003 and have even made some of my own. This one I am developing will be a little different as it will utilize reports from the very old NR2003 Replay Analyzer to generate highly in depth in race statistics along with championship statistics. More info as development continues will be updated here.',
     skillArray: ["Skill 1", "Skill 2", "Skill 3", "Skill 4", "Skill 5", "Skill 6", "Skill 7"],
     websiteURL: 'https://placehold.co/1920x1080',
     gitRepoURL: 'https://placehold.co/1920x1080',
