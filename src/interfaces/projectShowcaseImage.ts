@@ -1,4 +1,4 @@
 export interface ProjectShowcaseImage {
-    url: string;
-    caption: string;
+  url: string;
+  caption: string;
 }

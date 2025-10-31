@@ -1,14 +1,17 @@
-import { useLocation } from 'react-router-dom';
-import AppBarCustom from '../../components/navigation/AppBar'
-import Footer from '../../components/navigation/Footer'
-import type { Theme } from '../../interfaces/theme'
-import type { ProjectDictionary } from '../../interfaces/projectDictionary';
+import { useLocation } from "react-router-dom";
+import AppBarCustom from "../../components/navigation/AppBar";
+import Footer from "../../components/navigation/Footer";
+import type { Theme } from "../../interfaces/theme";
+import type { ProjectDictionary } from "../../interfaces/projectDictionary";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faEye } from '@fortawesome/free-regular-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faEye } from "@fortawesome/free-regular-svg-icons";
 
-function Project(props: { projectDictionary: ProjectDictionary, siteTheme: Theme }) {
+function Project(props: {
+  projectDictionary: ProjectDictionary;
+  siteTheme: Theme;
+}) {
   const { projectDictionary, siteTheme } = props;
   const location = useLocation();
 
@@ -17,55 +20,99 @@ function Project(props: { projectDictionary: ProjectDictionary, siteTheme: Theme
 
   return (
     <>
-      <div className={`${siteTheme.mainBackgroundColor} ${siteTheme.mainBackgroundTextColor} dark:text-white font-[MartianMono] py-10 px-5`}>
+      <div
+        className={`${siteTheme.mainBackgroundColor} ${siteTheme.mainBackgroundTextColor} dark:text-white font-[MartianMono] py-10 px-5`}
+      >
         <AppBarCustom siteTheme={siteTheme} />
         {/* Body Div */}
-        <div className='grid grid-cols-1 lg:grid-cols-2 mt-5'>
+        <div className="grid grid-cols-1 lg:grid-cols-2 mt-5">
           {/* Project Image and Skills Left Aligned */}
-          <div className='grid grid-cols-1 gap-5'>
-            <h1 className='text-center text-6xl'>{projectData.title}</h1>
-            <h3 className='text-center text-xl'>{projectData.date.getMonth() + 1}/{projectData.date.getFullYear()}</h3>
-            <img src={projectData.mainImageURL} alt={projectData.mainImageAltText} className={`rounded-xl mx-auto border-8 border-solid ${siteTheme.imageBorderColor}`} />
+          <div className="grid grid-cols-1 gap-5">
+            <h1 className="text-center text-6xl">{projectData.title}</h1>
+            <h3 className="text-center text-xl">
+              {projectData.date.getMonth() + 1}/{projectData.date.getFullYear()}
+            </h3>
+            <img
+              src={projectData.mainImageURL}
+              alt={projectData.mainImageAltText}
+              className={`rounded-xl mx-auto border-8 border-solid ${siteTheme.imageBorderColor}`}
+            />
 
-            <div className='grid md:grid-cols-2 xl:grid-cols-4 gap-x-4'>
+            <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-x-4">
               {projectData.skillArray.map((element) => (
-                <p key={element} className='bg-cyan-500 w-fit mx-auto rounded-md text-center sm:text-left m-2 p-1 border-2 border-solid'>{element}</p>
+                <p
+                  key={element}
+                  className="bg-cyan-500 w-fit mx-auto rounded-md text-center sm:text-left m-2 p-1 border-2 border-solid"
+                >
+                  {element}
+                </p>
               ))}
             </div>
 
-            <div className={projectData.websiteURL ? 'grid grid-cols-2 gap-10' : 'grid grid-cols-1 gap-10'}>
-              <button onClick={() => window.open(projectData.gitRepoURL, '_blank')} className={`${siteTheme.contentBoxBackgroundColor} text-${siteTheme.contentBoxTextColor} hover:bg-gray-700 hover:text-white rounded-lg p-2 transition duration-300 ease-in-out cursor-pointer mx-auto my-4`}>
-                <FontAwesomeIcon icon={faGithub} size='lg' color={siteTheme.contentBoxTextColor} /> View on Github
-              </button>
-              {projectData.websiteURL &&
-                <button onClick={() => window.open(projectData.websiteURL, '_blank')} className={`${siteTheme.contentBoxBackgroundColor} text-${siteTheme.contentBoxTextColor} hover:bg-gray-700 hover:text-white rounded-lg p-2 transition duration-300 ease-in-out cursor-pointer mx-auto my-4`}>
-                  <FontAwesomeIcon icon={faEye} size='lg' color={siteTheme.contentBoxTextColor} /> View Website
-                </button>
+            <div
+              className={
+                projectData.websiteURL
+                  ? "grid grid-cols-2 gap-10"
+                  : "grid grid-cols-1 gap-10"
               }
+            >
+              <button
+                onClick={() => window.open(projectData.gitRepoURL, "_blank")}
+                className={`${siteTheme.contentBoxBackgroundColor} text-${siteTheme.contentBoxTextColor} hover:bg-gray-700 hover:text-white rounded-lg p-2 transition duration-300 ease-in-out cursor-pointer mx-auto my-4`}
+              >
+                <FontAwesomeIcon
+                  icon={faGithub}
+                  size="lg"
+                  color={siteTheme.contentBoxTextColor}
+                />{" "}
+                View on Github
+              </button>
+              {projectData.websiteURL && (
+                <button
+                  onClick={() => window.open(projectData.websiteURL, "_blank")}
+                  className={`${siteTheme.contentBoxBackgroundColor} text-${siteTheme.contentBoxTextColor} hover:bg-gray-700 hover:text-white rounded-lg p-2 transition duration-300 ease-in-out cursor-pointer mx-auto my-4`}
+                >
+                  <FontAwesomeIcon
+                    icon={faEye}
+                    size="lg"
+                    color={siteTheme.contentBoxTextColor}
+                  />{" "}
+                  View Website
+                </button>
+              )}
             </div>
           </div>
           {/* Project Description */}
-          <div className='flex h-full flex-col'>
-            <h1 className='text-center text-6xl mt-5 lg:mt-0'>Project Description</h1>
-            <div className='flex flex-1 items-center'>
-              <p className='text-center text-3xl/12 p-4'>{projectData.description}</p>
+          <div className="flex h-full flex-col">
+            <h1 className="text-center text-6xl mt-5 lg:mt-0">
+              Project Description
+            </h1>
+            <div className="flex flex-1 items-center">
+              <p className="text-center text-3xl/12 p-4">
+                {projectData.description}
+              </p>
             </div>
           </div>
         </div>
         {/* Project Images Grid */}
-        <h1 className='text-center text-6xl mt-5'>Project Images</h1>
-        <div className={`mx-auto mt-5 pb-5 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4`}>
+        <h1 className="text-center text-6xl mt-5">Project Images</h1>
+        <div
+          className={`mx-auto mt-5 pb-5 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4`}
+        >
           {projectData.showcaseImages.map((image, index) => (
-            <div key={index} className={`${siteTheme.contentBoxBackgroundColor} ${siteTheme.contentBoxTextColor} h-fit rounded-lg`}>
-              <img src={image.url} className='p-2 w-full mx-auto rounded-xl' />
-              <p className='my-2 text-center'>{image.caption}</p>
+            <div
+              key={index}
+              className={`${siteTheme.contentBoxBackgroundColor} ${siteTheme.contentBoxTextColor} h-fit rounded-lg`}
+            >
+              <img src={image.url} className="p-2 w-full mx-auto rounded-xl" />
+              <p className="my-2 text-center">{image.caption}</p>
             </div>
           ))}
         </div>
       </div>
       <Footer {...siteTheme} />
     </>
-  )
+  );
 }
 
-export default Project
+export default Project;
