@@ -38,7 +38,7 @@ function Project(props: {
               className={`rounded-xl mx-auto border-8 border-solid ${siteTheme.imageBorderColor}`}
             />
 
-            <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-x-4">
+            <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-x-4 items-center">
               {projectData.skillArray.map((element) => (
                 <p
                   key={element}
@@ -52,8 +52,8 @@ function Project(props: {
             <div
               className={
                 projectData.websiteURL
-                  ? "grid grid-cols-2 gap-10"
-                  : "grid grid-cols-1 gap-10"
+                  ? "grid grid-cols-2 gap-10 items-center"
+                  : "grid grid-cols-1 gap-10 items-center"
               }
             >
               <button
