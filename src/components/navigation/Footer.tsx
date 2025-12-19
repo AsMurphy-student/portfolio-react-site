@@ -22,7 +22,7 @@ const Footer = (siteTheme: Theme) => {
             className="ml-4 hover:bg-gray-700 rounded-lg p-2 transition duration-300 ease-in-out cursor-pointer"
             onClick={() =>
               window.open(
-                "https://www.linkedin.com/in/ashton-murphy-57605424a/",
+                "https://www.linkedin.com/in/ashton-murphy25/",
                 "_blank"
               )
             }

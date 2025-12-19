@@ -4,107 +4,111 @@ import type { ProjectPageData } from "../interfaces/projectPage";
 const nr2003PointsSiteData: ProjectPageData = {
   previewData: {
     title: "NR2003 Points Site",
-    workInProgress: true,
+    workInProgress: false,
     description:
-      "Site will display race data for NR2003 using a React Frontend and Express.js backend.",
-    image: "https://placehold.co/2560x1440",
-    altText: "",
+      "This project is a NR2003 Pts manager which parses race data export from Nascar Racing 2003 and displays data on a season. The site uses Handlebars with React for the Front End, ExpressJS with Node for the Back End, and MongoDB using NoSQL as the Database.",
+    image: "/portfolio-react-site/nr2003-pts-site/championship-overview.png",
+    altText: "Showcases the main overview page for a championship",
   },
   title: "NR2003 Points Site",
-  date: new Date(),
-  mainImageURL: "https://placehold.co/1920x1080",
-  mainImageAltText: "Alt Text",
+  date: new Date("2025-12-1"),
+  mainImageURL: "/portfolio-react-site/nr2003-pts-site/championship-overview.png",
+  mainImageAltText: "Showcases the main overview page for a championship",
   description:
-    "This project will use ExpressJS for the backend while also using MongoDB for race data. The front end will also be made using React TS.",
+    "In this academic project, I developed a comprehensive points tracking website for NASCAR Racing 2003. Using Handlebars as my front-end templating engine and React components when needed, along with ExpressJS as the back end framework and MongoDB to manage data efficiently, I created an intuitive and visually appealing platform that allows users to track race-by-race performance across a championship. The project involved designing a parsing solution to extract relevant information from HTML files exported from the game, ensuring efficient and effective data retrieval.",
   skillArray: [
-    "Skill 1",
-    "Skill 2",
-    "Skill 3",
-    "Skill 4",
-    "Skill 5",
-    "Skill 6",
-    "Skill 7",
+    "Project Planning",
+    "Problem Solving",
+    "Technical Design",
+    "Coding Standards",
+    "Full Stack Development",
+    "Node",
+    "ExpressJS",
+    "Handlebars",
+    "React",
+    "MongoDB",
+    "NoSQL",
+    "JavaScript",
   ],
-  websiteURL: "https://placehold.co/1920x1080",
-  gitRepoURL: "https://placehold.co/1920x1080",
+  websiteURL: "https://nr2003-pts-site-87c88debf966.herokuapp.com/",
+  gitRepoURL: "https://github.com/AsMurphy-student/nr2003-pts-site",
   showcaseImages: [
     {
-      url: "https://placehold.co/1920x1080",
-      caption: "Test Caption",
+      url: "/portfolio-react-site/nr2003-pts-site/championship-overview.png",
+      caption: "Showcases the main overview page for a championship.",
     },
     {
-      url: "https://placehold.co/1920x1080",
-      caption: "Test Caption",
+      url: "/portfolio-react-site/nr2003-pts-site/driver-overview.png",
+      caption: "Showcases the driver overview page, showing stats on a specific driver.",
     },
     {
-      url: "https://placehold.co/1920x1080",
-      caption: "Test Caption",
+      url: "/portfolio-react-site/nr2003-pts-site/race-overview.png",
+      caption: "Showcases the race overview page, which shows stats on a specific race.",
     },
     {
-      url: "https://placehold.co/1920x1080",
-      caption: "Test Caption",
+      url: "/portfolio-react-site/nr2003-pts-site/championship-list.png",
+      caption: "Showcases the championship list page where users can create championships and navigate to the overview pages of them.",
     },
     {
-      url: "https://placehold.co/1920x1080",
-      caption: "Test Caption",
-    },
-    {
-      url: "https://placehold.co/1920x1080",
-      caption: "Test Caption",
+      url: "/portfolio-react-site/nr2003-pts-site/change-password.png",
+      caption: "The Change Password Form that is in the site.",
     },
   ],
 };
 
-const openweatherflutterapp: ProjectPageData = {
+const biblecompanion: ProjectPageData = {
   previewData: {
-    title: "NR2003 Championship Manager Flutter Desktop App",
-    workInProgress: true,
+    title: "Bible Companion Flutter App",
+    workInProgress: false,
     description:
-      "A Flutter App utilizing a local MongoDB Database for local, offline management of championship season in NR2003. This app will also utilize the NR2003 Replay Analyzer to generate in depth race statistics along with championship statistics.",
-    image: "https://placehold.co/1920x1080",
-    altText: "",
+      "This project is a Bible Reading App which I have named 'Bible Companion'. This app lets you choose a translation of the bible, along with a commentary as well. It features per chapter notes and a reflection checklist that can be changed. This app was created using Flutter and Dart.",
+    image: "/portfolio-react-site/bible-companion/reading.png",
+    altText: "Showcases the Main Reading Page of the App",
   },
-  title: "NR2003 Championship Manager Flutter Desktop App",
-  date: new Date(),
-  mainImageURL: "https://placehold.co/1920x1080",
-  mainImageAltText: "Alt Text",
+  title: "Bible Companion Flutter App",
+  date: new Date("2025-12-1"),
+  mainImageURL: "/portfolio-react-site/bible-companion/reading.png",
+  mainImageAltText: "Showcases the Main Reading Page of the App",
   description:
-    "I've seen a lot of different championship programs for NR2003 and have even made some of my own. This one I am developing will be a little different as it will utilize reports from the very old NR2003 Replay Analyzer to generate highly in depth in race statistics along with championship statistics. More info as development continues will be updated here.",
+    "As part of my portfolio, I developed the Bible Reader Mobile Flutter App, a user-friendly mobile application that provides easy access to various Bible translations. Using Flutter as the development framework, I designed an intuitive interface with a simple and straightforward design that makes it effortless for users to navigate and find their desired content. Through iterative design processes, I refined the app's usability, ensuring a seamless experience for readers of all levels. By leveraging the FreeBible API, I enabled users to access diverse Bible translations, further enhancing the app's value as a valuable resource for spiritual growth and exploration.",
   skillArray: [
-    "Skill 1",
-    "Skill 2",
-    "Skill 3",
-    "Skill 4",
-    "Skill 5",
-    "Skill 6",
-    "Skill 7",
+    "Project Planning",
+    "Problem Solving",
+    "Technical Design",
+    "Coding Standards",
+    "Flutter",
+    "Dart",
+    "Mobile Development",
   ],
-  websiteURL: "https://placehold.co/1920x1080",
-  gitRepoURL: "https://placehold.co/1920x1080",
+  gitRepoURL: "https://github.com/AsMurphy-student/Bible-Companion",
   showcaseImages: [
     {
-      url: "https://placehold.co/1920x1080",
-      caption: "Test Caption",
+      url: "/portfolio-react-site/bible-companion/reading.png",
+      caption: "Showcases the Main Reading Page of the App.",
     },
     {
-      url: "https://placehold.co/1920x1080",
-      caption: "Test Caption",
+      url: "/portfolio-react-site/bible-companion/book-selection.png",
+      caption: "Showcases the Main Drawer for picking a Book of the Bible.",
     },
     {
-      url: "https://placehold.co/1920x1080",
-      caption: "Test Caption",
+      url: "/portfolio-react-site/bible-companion/chapter-selection.png",
+      caption: "Showcases the End Drawer for picking a chapter of the selected Book.",
     },
     {
-      url: "https://placehold.co/1920x1080",
-      caption: "Test Caption",
+      url: "/portfolio-react-site/bible-companion/commentary.png",
+      caption: "Showcases the Commentary Page for the current Book and chapter.",
     },
     {
-      url: "https://placehold.co/1920x1080",
-      caption: "Test Caption",
+      url: "/portfolio-react-site/bible-companion/reflection.png",
+      caption: "Showcases the Reflection Page where the user can update it so that it suits their needs.",
     },
     {
-      url: "https://placehold.co/1920x1080",
-      caption: "Test Caption",
+      url: "/portfolio-react-site/bible-companion/notes.png",
+      caption: "Showcases the Notes Page where the user can record notes which is saved per chapter. This notes panel updates when a different chapter is selected.",
+    },
+    {
+      url: "/portfolio-react-site/bible-companion/settings.png",
+      caption: "Showcases the Settings Page where the user can change the translation and commentary.",
     },
   ],
 };
@@ -115,12 +119,12 @@ const panic: ProjectPageData = {
     workInProgress: false,
     description:
       "A MonoGame project created in a group setting in a Game Design Class.",
-    image: "/portfolio-react-site/panic-preview-image.jpg",
+    image: "/portfolio-react-site/panic/panic-preview-image.jpg",
     altText: "Showcases the main menu of Pan-ic",
   },
   title: "Pan-ic",
   date: new Date("2023-5-1"),
-  mainImageURL: "/portfolio-react-site/panic-main-image.jpg",
+  mainImageURL: "/portfolio-react-site/panic/panic-main-image.jpg",
   mainImageAltText: "Showcases the main menu of Pan-ic",
   description:
     "In this collaborative C# MonoGame project, I worked alongside three team members to design the game's architecture. As part of my role in data management, I focused on optimizing enemy and level data structures for efficient loading and manipulation. Additionally, I developed a simple, but effective, Windows Forms tool that streamlines the process of creating levels, allowing designers to focus on their creative vision.",
@@ -135,23 +139,23 @@ const panic: ProjectPageData = {
   gitRepoURL: "https://github.com/Funklax/Group-5-Whatever-Forever",
   showcaseImages: [
     {
-      url: "/portfolio-react-site/chef-running.gif",
+      url: "/portfolio-react-site/panic/chef-running.gif",
       caption: "Protagonist Chef Running Animation.",
     },
     {
-      url: "/portfolio-react-site/chef-attack.gif",
+      url: "/portfolio-react-site/panic/chef-attack.gif",
       caption: "Protagonist Chef Attacking Animation.",
     },
     {
-      url: "/portfolio-react-site/bullet-bounce.gif",
+      url: "/portfolio-react-site/panic/bullet-bounce.gif",
       caption: "Protagonist Chef Attacking with Bullets Bouncing off pan.",
     },
     {
-      url: "/portfolio-react-site/bullets-flying.gif",
+      url: "/portfolio-react-site/panic/bullets-flying.gif",
       caption: "Protagonist Chef Dodging Enemy Bullets.",
     },
     {
-      url: "/portfolio-react-site/enemy-animations.gif",
+      url: "/portfolio-react-site/panic/enemy-animations.gif",
       caption:
         "Showcases the enemy animations. In this case the middle animation is the enemy exploding upon death.",
     },
@@ -160,6 +164,6 @@ const panic: ProjectPageData = {
 
 export const projectDictionary: ProjectDictionary = {
   "nr2003-pts-site": nr2003PointsSiteData,
-  "openweather-flutter-app": openweatherflutterapp,
+  "bible-companion": biblecompanion,
   "pan-ic": panic,
 };
