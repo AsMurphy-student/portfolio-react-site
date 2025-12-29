@@ -1,6 +1,58 @@
 import type { ProjectDictionary } from "../interfaces/projectDictionary";
 import type { ProjectPageData } from "../interfaces/projectPage";
 
+const nr2003raceanalysisapp: ProjectPageData = {
+  previewData: {
+    title: "NR2003 Race Analysis App",
+    workInProgress: true,
+    description:
+      "This project is a expanded version of my original NR2003 Points Site. This is instead an offline desktop app which utilizes reports generated from NR2003 Replay Analyzer (NR2003RA) to generate indepth visualizations and reports of races. This project uses the Tauri Framework with SQLite.",
+    image: "https://placehold.co/1920x1080",
+    altText: "Placeholder Image",
+  },
+  title: "NR2003 Race Analysis App",
+  date: new Date(),
+  mainImageURL: "https://placehold.co/1920x1080",
+  mainImageAltText: "Placeholder Image",
+  description:
+    "For this personal project, I am creating an in depth tool for analyzing races from Nascar Racing 2003 which utilizes reports generated from NR2003 Replay Analyzer. This app will also feature championship points tracking among other features that other points managers have which use the exported standings at the end of the race. This tool utilizes the replay of the race and thus can have much more information on the races themselves. This app uses the Tauri Framework with React as the front-end, Rust as the back-end, and SQLite for data persistence which will utilize an object-oriented database due to the complex nature of the data being stored.",
+  skillArray: [
+    "Full Stack Development",
+    "Tauri",
+    "React",
+    "SQLite",
+    "OODB",
+    "Typescript",
+    "Problem Solving",
+    "Coding Standards",
+    "Technical Design",
+    "Project Planning",
+  ],
+  gitRepoURL: "https://github.com/AsMurphy-student/nr2003-race-analyzer-app",
+  showcaseImages: [
+    {
+      url: "https://placehold.co/1920x1080",
+      caption: "Placeholder Image",
+    },
+    {
+      url: "https://placehold.co/1920x1080",
+      caption: "Placeholder Image",
+    },
+    {
+      url: "https://placehold.co/1920x1080",
+      caption: "Placeholder Image",
+    },
+    {
+      url: "https://placehold.co/1920x1080",
+      caption: "Placeholder Image",
+    },
+    {
+      url: "https://placehold.co/1920x1080",
+      caption: "Placeholder Image",
+    },
+  ],
+};
+
 const nr2003PointsSiteData: ProjectPageData = {
   previewData: {
     title: "NR2003 Points Site",
@@ -163,6 +215,7 @@ const panic: ProjectPageData = {
 };
 
 export const projectDictionary: ProjectDictionary = {
+  "nr2003-race-analysis-app": nr2003raceanalysisapp,
   "nr2003-pts-site": nr2003PointsSiteData,
   "bible-companion": biblecompanion,
   "pan-ic": panic,
