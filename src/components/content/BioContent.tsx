@@ -13,7 +13,8 @@ const BioContent = () => {
           proficiencies include <u>traditional web development</u> (HTML, CSS,
           Javascript/Typescript), <u>React with Typescript</u>, <u>Flutter</u>,
           along with backend tools such as <u>Node.js</u> and <u>Express.js</u>.
-          I also have experience with <u>MongoDB</u> and <u>NoSQL</u>.
+          I also have experience with <u>MongoDB</u> and <u>NoSQL</u>. I also am
+          learning <u>SQLite</u> and <u>Object-Oriented Database Design</u>.
         </p>
       </div>
     </div>
