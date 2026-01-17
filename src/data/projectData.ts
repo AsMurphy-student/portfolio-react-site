@@ -53,6 +53,47 @@ const nr2003raceanalysisapp: ProjectPageData = {
   ],
 };
 
+const jobApplicationManager: ProjectPageData = {
+  previewData: {
+    title: "Job Application Manager",
+    workInProgress: true,
+    description:
+      "This project is a simple job application manager written in Flutter along with utilizing the SQLite plugin. I built this application to make it easier to manage applying to jobs, instead of using a spreadsheet.",
+    image: "/portfolio-react-site/job-application-manager/homepage.png",
+    altText: "Showcases main homepage",
+  },
+  title: "Job Application Manager",
+  date: new Date("2026-1-1"),
+  mainImageURL: "/portfolio-react-site/job-application-manager/homepage.png",
+  mainImageAltText: "Showcases main homepage",
+  description:
+    "This project uses Flutter along with the SQLite plugin to make it easy for users to manage and track jobs which they have applied to. They can see how long it has been since they have applied, update statuses of jobs which have been silent, and track progress in interviews for applications.",
+  skillArray: [
+    "Flutter",
+    "SQL",
+    "SQLite",
+    "Technical Design",
+    "Project Planning",
+    "Problem Solving",
+    "Coding Standards",
+  ],
+  gitRepoURL: "https://github.com/AsMurphy-student/job-application-manager",
+  showcaseImages: [
+    {
+      url: "/portfolio-react-site/job-application-manager/creation-form.png",
+      caption: "Showcases the creation form for adding a new job.",
+    },
+    {
+      url: "/portfolio-react-site/job-application-manager/job-details.png",
+      caption: "Showcases the job details page which is useful for referencing the full job description if the posting is gone.",
+    },
+    {
+      url: "/portfolio-react-site/job-application-manager/update-form.png",
+      caption: "Showcases the update form which utilizes the same component as the creation form.",
+    },
+  ],
+};
+
 const nr2003PointsSiteData: ProjectPageData = {
   previewData: {
     title: "NR2003 Points Site",
@@ -82,7 +123,6 @@ const nr2003PointsSiteData: ProjectPageData = {
     "NoSQL",
     "JavaScript",
   ],
-  websiteURL: "https://nr2003-pts-site-87c88debf966.herokuapp.com/",
   gitRepoURL: "https://github.com/AsMurphy-student/nr2003-pts-site",
   showcaseImages: [
     {
@@ -216,6 +256,7 @@ const panic: ProjectPageData = {
 
 export const projectDictionary: ProjectDictionary = {
   "nr2003-race-analysis-app": nr2003raceanalysisapp,
+  "job-application-manager": jobApplicationManager,
   "nr2003-pts-site": nr2003PointsSiteData,
   "bible-companion": biblecompanion,
   "pan-ic": panic,
